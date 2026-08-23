@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087f5b">
+
+<title>Care Online - Medicine & Personal Care</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:Arial,sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#f4f6f6;
+  color:#222;
+  padding-bottom:85px;
+}
+
+button,
+input,
+textarea,
+select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:#087f5b;
+  color:#fff;
+  padding:12px;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+}
+
+.header-top{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.logo-area{
+  display:flex;
+  align-items:center;
+  gap:9px;
+  cursor:pointer;
+}
+
+.logo-icon{
+  width:38px;
+  height:38px;
+  background:#fff;
+  color:#087f5b;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+  font-weight:bold;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.logo-subtitle{
+  font-size:10px;
+  opacity:.85;
+  margin-top:2px;
+}
+
+.header-actions{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.header-icon-btn{
+  border:0;
+  background:rgba(255,255,255,.16);
+  color:#fff;
+  width:36px;
+  height:36px;
+  border-radius:9px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+}
+
+.header-icon-btn svg{
+  fill:#fff;
+  width:18px;
+  height:18px;
+}
+
+.cart-btn{
+  border:0;
+  background:#fff;
+  color:#087f5b;
+  border-radius:20px;
+  padding:8px 12px;
+  font-weight:bold;
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.search-box{
+  margin-top:12px;
+  position:relative;
+}
+
+.search-box input{
+  width:100%;
+  padding:12px 15px 12px 42px;
+  border:0;
+  border-radius:10px;
+  outline:0;
+  font-size:14px;
+  box-shadow:inset 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.search-icon{
+  position:absolute;
+  left:14px;
+  top:50%;
+  transform:translateY(-50%);
+  color:#777;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:15px;
+}
+
+/* =========================
+   OFFER & PRESCRIPTION BANNER
+========================= */
+
+.offer{
+  background:linear-gradient(135deg, #087f5b, #12a979);
+  color:#fff;
+  border-radius:17px;
+  padding:20px;
+  margin-bottom:15px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(8,127,91,.18);
+}
+
+.offer:after{
+  content:"";
+  position:absolute;
+  width:130px;
+  height:130px;
+  right:-40px;
+  top:-40px;
+  background:rgba(255,255,255,.08);
+  border-radius:50%;
+}
+
+.offer-content{
+  position:relative;
+  z-index:2;
+}
+
+.offer-badge{
+  display:inline-block;
+  background:rgba(255,255,255,.18);
+  padding:4px 9px;
+  border-radius:20px;
+  font-size:11px;
+  margin-bottom:8px;
+}
+
+.offer h2{
+  font-size:21px;
+  margin-bottom:6px;
+}
+
+.offer p{
+  font-size:13px;
+  line-height:1.5;
+  opacity:.95;
+}
+
+.offer button{
+  margin-top:12px;
+  border:0;
+  background:#fff;
+  color:#087f5b;
+  padding:10px 16px;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+/* PRESCRIPTION CARD */
+.prescription-card{
+  background:#fff;
+  border:1px solid #d4edda;
+  border-left:5px solid #25D366;
+  border-radius:14px;
+  padding:15px;
+  margin-bottom:22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+
+.prescription-info h3{
+  font-size:15px;
+  color:#155724;
+  margin-bottom:4px;
+}
+
+.prescription-info p{
+  font-size:12px;
+  color:#555;
+  line-height:1.4;
+}
+
+.whatsapp-action-btn{
+  background:#25D366;
+  color:#fff;
+  border:0;
+  border-radius:8px;
+  padding:10px 14px;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  white-space:nowrap;
+  box-shadow:0 2px 6px rgba(37,211,102,.3);
+}
+
+.whatsapp-action-btn svg{
+  fill:#fff;
+  width:16px;
+  height:16px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section{
+  margin-bottom:25px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+}
+
+.section-head h2{
+  font-size:18px;
+}
+
+.see-all{
+  border:0;
+  background:none;
+  color:#087f5b;
+  font-size:12px;
+  font-weight:bold;
+}
+
+/* =========================
+   CATEGORY
+========================= */
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.category{
+  background:#fff;
+  padding:15px 8px;
+  text-align:center;
+  border-radius:13px;
+  border:1px solid #eee;
+  cursor:pointer;
+  transition:.2s;
+}
+
+.category:active{
+  transform:scale(.97);
+}
+
+.category-icon{
+  width:48px;
+  height:48px;
+  margin:0 auto 8px;
+  background:#e7f5ef;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:25px;
+}
+
+/* =========================
+   PRODUCT
+========================= */
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.product{
+  background:#fff;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+  min-width:0;
+  border:1px solid #f0f0f0;
+}
+
+.product-image{
+  height:155px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f9fbfb;
+  font-size:48px;
+  overflow:hidden;
+  cursor:pointer;
+}
+
+.product-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.product-info{
+  padding:11px;
+}
+
+.product-name{
+  font-weight:bold;
+  font-size:13px;
+  line-height:1.4;
+  min-height:37px;
+}
+
+.price{
+  color:#087f5b;
+  font-size:16px;
+  font-weight:bold;
+  margin-top:6px;
+}
+
+.old-price{
+  color:#999;
+  font-size:11px;
+  text-decoration:line-through;
+  margin-left:4px;
+}
+
+.product-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:6px;
+  margin-top:10px;
+}
+
+.product-buttons button{
+  border:0;
+  padding:9px 3px;
+  border-radius:8px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.buy{
+  background:#087f5b;
+  color:#fff;
+}
+
+.add{
+  background:#e7f5ef;
+  color:#087f5b;
+}
+
+/* =========================
+   TRUST BADGES
+========================= */
+
+.trust-features{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+  margin:25px 0;
+}
+
+.trust-item{
+  background:#fff;
+  padding:14px 10px;
+  border-radius:12px;
+  border:1px solid #eee;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.trust-icon{
+  font-size:24px;
+}
+
+.trust-text strong{
+  display:block;
+  font-size:12px;
+  color:#222;
+}
+
+.trust-text span{
+  font-size:11px;
+  color:#777;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+  background:#fff;
+  border-top:1px solid #e2e8f0;
+  padding:30px 15px 20px;
+  margin-top:30px;
+}
+
+.footer-content{
+  max-width:1100px;
+  margin:auto;
+}
+
+.footer-brand h3{
+  color:#087f5b;
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+
+.footer-brand p{
+  font-size:12px;
+  color:#666;
+  margin-top:6px;
+  line-height:1.6;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:18px 0;
+}
+
+.footer-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:9px 15px;
+  border-radius:9px;
+  font-size:12px;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+.btn-wa{
+  background:#e7f9ee;
+  color:#128c7e;
+  border:1px solid #c3e6cb;
+}
+
+.btn-fb{
+  background:#e7f0ff;
+  color:#1877f2;
+  border:1px solid #b8daff;
+}
+
+.footer-bottom{
+  text-align:center;
+  padding-top:15px;
+  border-top:1px solid #f0f0f0;
+  font-size:11px;
+  color:#888;
+}
+
+/* =========================
+   FLOATING BUTTONS
+========================= */
+
+.floating-support{
+  position:fixed;
+  right:15px;
+  bottom:80px;
+  z-index:990;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.float-btn{
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,0.22);
+  text-decoration:none;
+  transition:transform 0.2s;
+}
+
+.float-btn svg{
+  fill:#fff;
+  width:24px;
+  height:24px;
+}
+
+.float-btn.whatsapp{
+  background:#25D366;
+}
+
+.float-btn.facebook{
+  background:#1877F2;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  height:68px;
+  background:#fff;
+  border-top:1px solid #ddd;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  z-index:500;
+  box-shadow:0 -3px 15px rgba(0,0,0,.07);
+}
+
+.nav-item{
+  border:0;
+  background:none;
+  color:#777;
+  font-size:10px;
+  text-align:center;
+  min-width:60px;
+}
+
+.nav-item span{
+  display:block;
+  font-size:20px;
+  margin-bottom:2px;
+}
+
+.nav-item.active{
+  color:#087f5b;
+  font-weight:bold;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+  display:none;
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.52);
+  z-index:1000;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.modal.show{
+  display:flex;
+}
+
+.modal-box{
+  background:#fff;
+  width:100%;
+  max-width:600px;
+  max-height:92vh;
+  overflow:auto;
+  border-radius:22px 22px 0 0;
+  padding:20px;
+  animation:slideUp .22s ease;
+}
+
+@keyframes slideUp{
+  from{
+    transform:translateY(100%);
+  }
+  to{
+    transform:translateY(0);
+  }
+}
+
+.modal-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:17px;
+}
+
+.modal-head h2{
+  font-size:19px;
+}
+
+.close{
+  border:0;
+  background:#eee;
+  border-radius:50%;
+  width:34px;
+  height:34px;
+  font-size:18px;
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  border-bottom:1px solid #eee;
+  padding:12px 0;
+}
+
+.qty{
+  display:flex;
+  align-items:center;
+  gap:7px;
+}
+
+.qty button{
+  width:30px;
+  height:30px;
+  border:0;
+  border-radius:7px;
+  background:#e7f5ef;
+  color:#087f5b;
+}
+
+.total{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  font-size:18px;
+  margin:18px 0;
+}
+
+/* =========================
+   FORM & CHECKOUT
+========================= */
+
+.form-group{
+  margin-bottom:13px;
+}
+
+.form-group label{
+  display:block;
+  margin-bottom:6px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select{
+  width:100%;
+  padding:12px;
+  border:1px solid #ddd;
+  border-radius:9px;
+  outline:none;
+  background:#fff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+  border-color:#087f5b;
+}
+
+.form-group textarea{
+  min-height:75px;
+  resize:vertical;
+}
+
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+}
+
+.primary-btn{
+  width:100%;
+  border:0;
+  background:#087f5b;
+  color:#fff;
+  padding:13px;
+  border-radius:9px;
+  font-weight:bold;
+}
+
+.checkout-summary-box{
+  background:#f8faf9;
+  border:1px solid #e2e8f0;
+  border-radius:12px;
+  padding:14px;
+  margin:15px 0;
+}
+
+.summary-row{
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  color:#555;
+  margin-bottom:7px;
+}
+
+.summary-divider{
+  border:0;
+  border-top:1px dashed #cbd5e1;
+  margin:10px 0;
+}
+
+.summary-total{
+  display:flex;
+  justify-content:space-between;
+  font-size:16px;
+  font-weight:bold;
+  color:#087f5b;
+}
+
+.payment-box{
+  background:#f1f8f5;
+  padding:14px;
+  border-radius:11px;
+  margin-bottom:15px;
+}
+
+.payment-number{
+  font-size:19px;
+  font-weight:bold;
+  color:#087f5b;
+  margin-top:6px;
+}
+
+/* =========================
+   ACCOUNT (DARAZ STYLE PROFILE)
+========================= */
+
+.account-tabs{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5px;
+  background:#f2f4f3;
+  padding:4px;
+  border-radius:10px;
+  margin-bottom:17px;
+}
+
+.account-tab{
+  border:0;
+  padding:10px;
+  background:transparent;
+  border-radius:8px;
+  font-weight:bold;
+  color:#777;
+}
+
+.account-tab.active{
+  background:#fff;
+  color:#087f5b;
+  box-shadow:0 1px 5px rgba(0,0,0,.08);
+}
+
+.account-profile-card{
+  background:linear-gradient(135deg, #087f5b, #12a979);
+  color:#fff;
+  border-radius:14px;
+  padding:16px;
+  margin-bottom:15px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  box-shadow:0 4px 12px rgba(8,127,91,.15);
+}
+
+.profile-avatar{
+  width:52px;
+  height:52px;
+  background:#fff;
+  color:#087f5b;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:bold;
+}
+
+.profile-details h3{
+  font-size:16px;
+  font-weight:bold;
+}
+
+.profile-details p{
+  font-size:12px;
+  opacity:0.9;
+  margin-top:2px;
+}
+
+.badge-member{
+  display:inline-block;
+  background:rgba(255,255,255,0.22);
+  padding:2px 7px;
+  border-radius:10px;
+  font-size:10px;
+  margin-top:4px;
+}
+
+/* =========================
+   TRACK
+========================= */
+
+.track-result{
+  background:#fff;
+  border-radius:12px;
+  padding:15px;
+  margin-top:15px;
+  border:1px solid #eee;
+}
+
+.status{
+  display:inline-block;
+  padding:4px 9px;
+  border-radius:20px;
+  background:#fff3d4;
+  color:#956400;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.status.confirmed, .status.delivered{
+  background:#e7f6ec;
+  color:#218838;
+}
+
+.status.processing{
+  background:#e8f0ff;
+  color:#2458a6;
+}
+
+.status.shipped{
+  background:#fff0df;
+  color:#a75b00;
+}
+
+.status.cancelled{
+  background:#ffe7e7;
+  color:#c62828;
+}
+
+.track-line{
+  margin-top:15px;
+  line-height:2;
+}
+
+.empty{
+  background:#fff;
+  padding:30px;
+  text-align:center;
+  border-radius:12px;
+  color:#777;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(min-width:700px){
+
+  .category-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .product-grid{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .trust-features{
+    grid-template-columns:repeat(4,1fr);
+  }
+
+  .product-image{
+    height:180px;
+  }
+
+}
+
+@media(min-width:801px){
+
+  .bottom-nav{
+    max-width:600px;
+    left:50%;
+    right:auto;
+    width:600px;
+    transform:translateX(-50%);
+    border-radius:15px 15px 0 0;
+  }
+
+}
+
+@media(max-width:400px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .product-image{
+    height:135px;
+  }
+
+  .product-info{
+    padding:9px;
+  }
+
+  .product-name{
+    font-size:12px;
+  }
+
+  .form-row{
+    grid-template-columns:1fr;
+  }
+
+  .prescription-card{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     FLOATING SUPPORT
+========================= -->
+
+<div class="floating-support">
+
+  <!-- WhatsApp Support -->
+  <a
+    id="floatWhatsapp"
+    href="https://wa.me/8801892291817?text=Hello%20Care%20Online,%20আমি%20একটি%20প্রোডাক্ট/ঔষধ%20সম্পর্কে%20জানতে%20চাই।"
+    target="_blank"
+    class="float-btn whatsapp"
+    title="WhatsApp Support">
+    <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+  </a>
+
+  <!-- Facebook Page -->
+  <a
+    id="floatFacebook"
+    href="https://www.facebook.com/share/1CYp2sUvdg/"
+    target="_blank"
+    class="float-btn facebook"
+    title="Facebook Page">
+    <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+  <div class="header-top">
+
+    <div class="logo-area" onclick="goHome()">
+
+      <div class="logo-icon">
+        💚
+      </div>
+
+      <div>
+
+        <div class="logo">
+          Care Online
+        </div>
+
+        <div class="logo-subtitle">
+          Medicine & Personal Care
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="header-actions">
+
+      <!-- Facebook Link -->
+      <a
+        id="headerFbLink"
+        href="https://www.facebook.com/share/1CYp2sUvdg/"
+        target="_blank"
+        class="header-icon-btn"
+        title="Facebook Page">
+        <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+
+      <!-- WhatsApp Link -->
+      <a
+        id="headerWaLink"
+        href="https://wa.me/8801892291817"
+        target="_blank"
+        class="header-icon-btn"
+        title="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      </a>
+
+      <button
+        class="header-icon-btn"
+        onclick="openAccount()"
+        title="Account">
+        👤
+      </button>
+
+      <button
+        class="cart-btn"
+        onclick="openCart()">
+        🛒 <span id="cartCount">0</span>
+      </button>
+
+    </div>
+
+  </div>
+
+  <div class="search-box">
+
+    <span class="search-icon">
+      🔍
+    </span>
+
+    <input
+      id="searchInput"
+      type="search"
+      placeholder="Medicine, personal care খুঁজুন..."
+      oninput="renderProducts()">
+
+  </div>
+
+</header>
+
+
+<main class="container">
+
+  <!-- OFFER BANNER -->
+
+  <section class="offer">
+
+    <div class="offer-content">
+
+      <span class="offer-badge">
+        🔥 Special Offer
+      </span>
+
+      <h2 id="offerTitle">
+        Care Online-এ বিশেষ ছাড়!
+      </h2>
+
+      <p id="offerText">
+        প্রয়োজনীয় Medicine ও Personal Care
+        Product এখন সহজেই অর্ডার করুন।
+      </p>
+
+      <button id="offerBtn" onclick="scrollToProducts()">
+        এখনই শপ করুন →
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- PRESCRIPTION & WHATSAPP ORDER -->
+
+  <section class="prescription-card">
+
+    <div class="prescription-info">
+      <h3>📋 প্রেসক্রিপশন দিয়ে অর্ডার করুন</h3>
+      <p>প্রেসক্রিপশন বা যেকোনো ঔষধের ছবি তুলে আমাদের WhatsApp-এ পাঠান। আমাদের ফার্মাসিস্ট সাপোর্ট টিম সরাসরি অর্ডার কনফার্ম করবে।</p>
+    </div>
+
+    <a
+      id="prescriptionWaBtn"
+      href="https://wa.me/8801892291817?text=Hello%20Care%20Online,%20আমি%20প্রেসক্রিপশন%20পাঠিয়ে%20অর্ডার%20করতে%20চাই।"
+      target="_blank"
+      class="whatsapp-action-btn">
+      <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+      ছবি পাঠান WhatsApp-এ
+    </a>
+
+  </section>
+
+
+  <!-- CATEGORIES -->
+
+  <section class="section">
+
+    <div class="section-head">
+
+      <h2>
+        Categories
+      </h2>
+
+      <button
+        class="see-all"
+        onclick="goHome()">
+        See All
+      </button>
+
+    </div>
+
+    <div
+      class="category-grid"
+      id="categoryGrid">
+    </div>
+
+  </section>
+
+
+  <!-- PRODUCTS -->
+
+  <section
+    class="section"
+    id="productsSection">
+
+    <div class="section-head">
+
+      <h2>
+        Popular Products
+      </h2>
+
+    </div>
+
+    <div
+      class="product-grid"
+      id="productGrid">
+    </div>
+
+  </section>
+
+
+  <!-- TRUST BADGES -->
+
+  <section class="trust-features">
+
+    <div class="trust-item">
+      <span class="trust-icon">💊</span>
+      <div class="trust-text">
+        <strong>১০০% জেনুইন পণ্য</strong>
+        <span>অরিজিনাল ঔষধ ও কেয়ার</span>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">🚚</span>
+      <div class="trust-text">
+        <strong>দ্রুত ডেলিভারি</strong>
+        <span>সারাদেশে হোম ডেলিভারি</span>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">💵</span>
+      <div class="trust-text">
+        <strong>ক্যাশ অন ডেলিভারি</strong>
+        <span>পণ্য হাতে পেয়ে পেমেন্ট</span>
+      </div>
+    </div>
+
+    <div class="trust-item">
+      <span class="trust-icon">🎧</span>
+      <div class="trust-text">
+        <strong>২৪/৭ সাপোর্ট</strong>
+        <span>WhatsApp ও হেল্পলাইন</span>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <h3>💚 Care Online</h3>
+      <p>
+        <strong>Care Online — আপনার স্বাস্থ্য ও সুরক্ষায় বিশ্বস্ত সঙ্গী।</strong><br>
+        ঘরে বসেই প্রয়োজনীয় ঔষধ, পার্সোনাল কেয়ার এবং স্বাস্থ্য সুরক্ষা সামগ্রী অর্ডার করুন নির্ভরযোগ্য ও নিরাপদ সেবায়।
+      </p>
+    </div>
+
+    <div class="footer-links">
+
+      <a
+        id="footerWaBtn"
+        href="https://wa.me/8801892291817"
+        target="_blank"
+        class="footer-btn btn-wa">
+        💬 WhatsApp: <span id="footerWaText">01892291817</span>
+      </a>
+
+      <a
+        id="footerFbBtn"
+        href="https://www.facebook.com/share/1CYp2sUvdg/"
+        target="_blank"
+        class="footer-btn btn-fb">
+        📘 Facebook Official Page
+      </a>
+
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 Care Online. All rights reserved. | Developed for Reliable Health & Personal Care Service.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================
+     BOTTOM NAVIGATION
+========================= -->
+
+<nav class="bottom-nav">
+
+  <button
+    class="nav-item active"
+    onclick="goHome(this)">
+    <span>🏠</span>
+    Home
+  </button>
+
+  <button
+    class="nav-item"
+    onclick="openTrack(this)">
+    <span>📦</span>
+    Track Order
+  </button>
+
+  <button
+    class="nav-item"
+    onclick="openCart(this)">
+    <span>🛒</span>
+    Cart
+  </button>
+
+  <button
+    class="nav-item"
+    onclick="openAccount(this)">
+    <span>👤</span>
+    Account
+  </button>
+
+</nav>
+
+
+<!-- =========================
+     CART MODAL
+========================= -->
+
+<div
+  class="modal"
+  id="cartModal"
+  onclick="closeOnOutside(event,'cartModal')">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+      <h2>🛒 আপনার Cart</h2>
+      <button class="close" onclick="closeModal('cartModal')">×</button>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="total">
+      <span>Total</span>
+      <span id="cartTotal">৳0</span>
+    </div>
+
+    <button class="primary-btn" onclick="openCheckout()">
+      অর্ডার করুন
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     CHECKOUT
+========================= -->
+
+<div class="modal" id="checkoutModal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+      <h2>অর্ডার কনফার্ম করুন</h2>
+      <button class="close" onclick="closeModal('checkoutModal')">×</button>
+    </div>
+
+    <form id="checkoutForm">
+
+      <!-- গ্রাহকের তথ্য -->
+      <div class="form-group">
+        <label>আপনার পূর্ণ নাম</label>
+        <input id="customerName" placeholder="আপনার নাম লিখুন" required>
+      </div>
+
+      <div class="form-group">
+        <label>ফোন নম্বর</label>
+        <input id="customerPhone" type="tel" placeholder="018XXXXXXXX" required>
+      </div>
+
+      <!-- এরিয়া সিলেকশন -->
+      <div class="form-row">
+        <div class="form-group">
+          <label>বিভাগ (Division)</label>
+          <select id="customerDivision" onchange="onDivisionChange()" required>
+            <option value="">বিভাগ সিলেক্ট করুন</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>জেলা (District/City)</label>
+          <select id="customerDistrict" onchange="updateCheckoutSummary()" required>
+            <option value="">আগে বিভাগ বেছে নিন</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>হোম এড্রেস / বিস্তারিত ঠিকানা</label>
+        <textarea
+          id="customerAddress"
+          placeholder="যেমন: বাড়ি নং ১২, রোড নং ৪, থানা/উপজেলা, ইউনিয়ন বা এলাকার নাম..."
+          required></textarea>
+      </div>
+
+      <!-- দারাজ স্টাইল অর্ডার সামারি -->
+      <div class="checkout-summary-box">
+        <div style="font-weight:bold; font-size:14px; margin-bottom:9px; color:#222;">
+          📋 অর্ডারের বিবরণ (Order Summary)
+        </div>
+        
+        <div class="summary-row">
+          <span>প্রোডাক্টের মোট মূল্য (Subtotal):</span>
+          <span id="summarySubtotal">৳0</span>
+        </div>
+
+        <div class="summary-row">
+          <span>ডেলিভারি চার্জ (Delivery Fee):</span>
+          <span id="summaryDelivery">৳60</span>
+        </div>
+
+        <hr class="summary-divider">
+
+        <div class="summary-total">
+          <span>সর্বমোট প্রদেয় টাকা:</span>
+          <span id="summaryGrandTotal">৳0</span>
+        </div>
+      </div>
+
+      <!-- পেমেন্ট বক্স -->
+      <div class="payment-box">
+        <strong>নিচের নাম্বারে টাকা পাঠিয়ে অর্ডার সম্পন্ন করুন:</strong>
+        <p style="margin-top:6px;" id="paymentMethodName">bKash (Personal)</p>
+        <div class="payment-number" id="paymentNumber">01892291817</div>
+      </div>
+
+      <div class="form-group">
+        <label>Payment Method</label>
+        <select id="paymentMethod" onchange="updateCheckoutPaymentNumber()">
+          <option value="bKash">bKash</option>
+          <option value="Nagad">Nagad</option>
+          <option value="Rocket">Rocket</option>
+          <option value="Cash on Delivery">Cash on Delivery</option>
+        </select>
+      </div>
+
+      <div class="form-group" id="txnGroup">
+        <label>Transaction ID (TxnID)</label>
+        <input id="transactionId" placeholder="Payment করার পর TxnID দিন">
+      </div>
+
+      <button class="primary-btn" type="submit">
+        অর্ডার সম্পন্ন করুন
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     TRACK ORDER
+========================= -->
+
+<div class="modal" id="trackModal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+      <h2>📦 Track Order</h2>
+      <button class="close" onclick="closeModal('trackModal')">×</button>
+    </div>
+
+    <form onsubmit="trackOrder(event)">
+
+      <div class="form-group">
+        <label>Order ID</label>
+        <input id="trackOrderId" placeholder="যেমন: CO12345678" required>
+      </div>
+
+      <button class="primary-btn">
+        Track Order
+      </button>
+
+    </form>
+
+    <div id="trackResult"></div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     ACCOUNT / LOGIN (DARAZ STYLE)
+========================= -->
+
+<div class="modal" id="accountModal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+      <h2>👤 My Account</h2>
+      <button class="close" onclick="closeModal('accountModal')">×</button>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="loginSection">
+
+      <div class="account-tabs">
+        <button class="account-tab active" id="loginTab" onclick="showLogin()">Login</button>
+        <button class="account-tab" id="registerTab" onclick="showRegister()">Registration</button>
+      </div>
+
+      <div class="form-group">
+        <label>ফোন নম্বর অথবা ইমেইল</label>
+        <input id="loginIdentifier" type="text" placeholder="018XXXXXXXX অথবা ইমেইল" autocomplete="username">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input id="loginPassword" type="password" placeholder="আপনার Password" autocomplete="current-password">
+      </div>
+
+      <button class="primary-btn" type="button" onclick="loginUser()">
+        Login করুন
+      </button>
+
+      <p style="text-align:center; margin-top:17px; color:#666; font-size:13px;">
+        Account নেই?
+        <button type="button" onclick="showRegister()" style="border:0; background:none; color:#087f5b; font-weight:bold;">
+          Create Account
+        </button>
+      </p>
+
+    </div>
+
+    <!-- REGISTRATION -->
+    <div id="registerSection" style="display:none;">
+
+      <div class="account-tabs">
+        <button class="account-tab" onclick="showLogin()">Login</button>
+        <button class="account-tab active">Registration</button>
+      </div>
+
+      <div class="form-group">
+        <label>আপনার পূর্ণ নাম</label>
+        <input id="registerName" type="text" placeholder="যেমন: মো: রহিম উদ্দিন">
+      </div>
+
+      <div class="form-group">
+        <label>ফোন নম্বর</label>
+        <input id="registerPhone" type="tel" placeholder="018XXXXXXXX">
+      </div>
+
+      <div class="form-group">
+        <label>ইমেইল (ঐচ্ছিক)</label>
+        <input id="registerEmail" type="email" placeholder="example@gmail.com">
+      </div>
+
+      <div class="form-group">
+        <label>Password</label>
+        <input id="registerPassword" type="password" placeholder="কমপক্ষে ৬ অক্ষর">
+      </div>
+
+      <button class="primary-btn" type="button" onclick="registerUser()">
+        একাউন্ট তৈরি করুন
+      </button>
+
+      <p style="text-align:center; margin-top:17px; font-size:13px;">
+        Already have an account?
+        <button type="button" onclick="showLogin()" style="border:0; background:none; color:#087f5b; font-weight:bold;">
+          Login
+        </button>
+      </p>
+
+    </div>
+
+    <!-- LOGGED IN PROFILE (DARAZ STYLE) -->
+    <div id="loggedInSection" style="display:none;">
+
+      <div class="account-profile-card">
+        <div class="profile-avatar" id="userAvatar">U</div>
+        <div class="profile-details">
+          <h3 id="userName">User</h3>
+          <p id="userContact">018XXXXXXXX</p>
+          <span class="badge-member">✓ Verified Member</span>
+        </div>
+      </div>
+
+      <!-- MY ORDERS SECTION -->
+      <div style="margin-bottom:15px;">
+        <h4 style="font-size:15px; margin-bottom:10px; color:#222; display:flex; justify-content:space-between; align-items:center;">
+          <span>📦 আমার অর্ডারসমূহ (My Orders)</span>
+        </h4>
+        <div id="userOrdersList"></div>
+      </div>
+
+      <a
+        id="accountWaBtn"
+        href="https://wa.me/8801892291817"
+        target="_blank"
+        class="primary-btn"
+        style="text-decoration:none; text-align:center; display:block; margin-bottom:10px; background:#25D366;">
+        💬 কাস্টমার সাপোর্ট (WhatsApp)
+      </a>
+
+      <button class="primary-btn" onclick="openTrackFromAccount()">
+        🔍 অন্য Order ID দিয়ে Track করুন
+      </button>
+
+      <button
+        onclick="logoutUser()"
+        style="width:100%; margin-top:10px; padding:12px; border:0; border-radius:9px; background:#ffe7e7; color:#c62828; font-weight:bold;">
+        Logout
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     PRODUCT DETAILS
+========================= -->
+
+<div class="modal" id="productModal">
+
+  <div class="modal-box">
+
+    <div class="modal-head">
+      <h2 id="detailName">Product</h2>
+      <button class="close" onclick="closeModal('productModal')">×</button>
+    </div>
+
+    <div id="productDetails"></div>
+
+  </div>
+
+</div>
+
+
+<script>
+
+/* =========================
+   BANGLADESH LOCATIONS DATA
+========================= */
+
+const bdLocations = {
+  "ঢাকা (Dhaka)": [
+    "ঢাকা (Dhaka)", "গাজীপুর (Gazipur)", "নারায়ণগঞ্জ (Narayanganj)", 
+    "টাঙ্গাইল (Tangail)", "নরসিংদী (Narsingdi)", "ফরিদপুর (Faridpur)", 
+    "মানিকগঞ্জ (Manikganj)", "মুন্সিগঞ্জ (Munshiganj)", "কিশোরগঞ্জ (Kishoreganj)", 
+    "রাজবাড়ী (Rajbari)", "গোপালগঞ্জ (Gopalganj)", "মাদারীপুর (Madaripur)", "শরীয়তপুর (Shariatpur)"
+  ],
+  "রংপুর (Rangpur)": [
+    "রংপুর (Rangpur)", "দিনাজপুর (Dinajpur)", "কুড়িগ্রাম (Kurigram)", 
+    "গাইবান্ধা (Gaibandha)", "নীলফামারী (Nilphamari)", "পঞ্চগড় (Panchagarh)", 
+    "ঠাকুরগাঁও (Thakurgaon)", "লালমনিরহাট (Lalmonirhat)"
+  ],
+  "চট্টগ্রাম (Chattogram)": [
+    "চট্টগ্রাম (Chattogram)", "কক্সবাজার (Cox's Bazar)", "কুমিল্লা (Cumilla)", 
+    "নোয়াখালী (Noakhali)", "ফেনী (Feni)", "ব্রাহ্মণবাড়িয়া (Brahmanbaria)", 
+    "চাঁদপুর (Chandpur)", "লক্ষ্মীপুর (Lakshmipur)", "রাঙ্গামাটি (Rangamati)", 
+    "বান্দরবান (Bandarban)", "খাগড়াছড়ি (Khagrachhari)"
+  ],
+  "রাজশাহী (Rajshahi)": [
+    "রাজশাহী (Rajshahi)", "বগুড়া (Bogura)", "পাবনা (Pabna)", 
+    "সিরাজগঞ্জ (Sirajganj)", "নওগাঁ (Naogaon)", "নাটোর (Natore)", 
+    "জয়পুরহাট (Joypurhat)", "চাঁপাইনবাবগঞ্জ (Chapai Nawabganj)"
+  ],
+  "খুলনা (Khulna)": [
+    "খুলনা (Khulna)", "যশোর (Jashore)", "কুষ্টিয়া (Kushtia)", 
+    "সাতক্ষীরা (Satkhira)", "বাগেরহাট (Bagerhat)", "ঝিনাইদহ (Jhenaidah)", 
+    "চুয়াডাঙ্গা (Chuadanga)", "মেহেরপুর (Meherpur)", "মাগুরা (Magura)", "নড়াইল (Narail)"
+  ],
+  "বরিশাল (Barishal)": [
+    "বরিশাল (Barishal)", "পটুয়াখালী (Patuakhali)", "ভোলা (Bhola)", 
+    "পিরোজপুর (Pirojpur)", "বরগুনা (Barguna)", "ঝালকাঠি (Jhalokati)"
+  ],
+  "সিলেট (Sylhet)": [
+    "সিলেট (Sylhet)", "মৌলভীবাজার (Moulvibazar)", "হবিগঞ্জ (Habiganj)", 
+    "সুনামগঞ্জ (Sunamganj)"
+  ],
+  "ময়মনসিংহ (Mymensingh)": [
+    "ময়মনসিংহ (Mymensingh)", "জামালপুর (Jamalpur)", "নেত্রকোণা (Netrokona)", 
+    "শেরপুর (Sherpur)"
+  ]
+};
+
+
+/* =========================
+   DATA LOAD & STORAGE
+========================= */
+
+function loadLocal(key, fallback){
+  try{
+    const data = localStorage.getItem(key);
+    return data ? JSON.parse(data) : fallback;
+  }catch(e){
+    return fallback;
+  }
+}
+
+let products = [];
+let categories = [];
+
+let cart = loadLocal("careCart", []);
+let currentUser = loadLocal("careOnlineUser", null);
+
+
+/* =========================
+   PRODUCTS
+========================= */
+
+function loadProducts(){
+  products = loadLocal("careProducts", [
+    {
+      id: 1,
+      name: "Health Care Product",
+      category: "Medicine",
+      price: 450,
+      oldPrice: 550,
+      image: "",
+      description: "Quality health care product."
+    },
+    {
+      id: 2,
+      name: "Personal Care Product",
+      category: "Personal Care",
+      price: 320,
+      oldPrice: 380,
+      image: "",
+      description: "Personal care product."
+    },
+    {
+      id: 3,
+      name: "Men's Care Product",
+      category: "Men's Care",
+      price: 390,
+      oldPrice: 450,
+      image: "",
+      description: "Men's care product."
+    },
+    {
+      id: 4,
+      name: "Hygiene Product",
+      category: "Hygiene",
+      price: 250,
+      oldPrice: 300,
+      image: "",
+      description: "Hygiene product."
+    }
+  ]);
+
+  renderProducts();
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+function loadCategories(){
+  categories = loadLocal("careCategories", [
+    "Medicine",
+    "Personal Care",
+    "Men's Care",
+    "Hygiene"
+  ]);
+
+  renderCategories();
+}
+
+
+function renderCategories(){
+  const grid = document.getElementById("categoryGrid");
+  const icons = ["💊", "🧴", "🧔", "🧼", "🩹", "🧻"];
+
+  grid.innerHTML = categories.map((category, index) => {
+    const catName = typeof category === 'object' ? (category.name || "") : category;
+    return `
+      <div
+        class="category"
+        onclick="filterCategory('${escapeAttr(catName)}')">
+
+        <div class="category-icon">
+          ${icons[index % icons.length]}
+        </div>
+
+        <strong>
+          ${escapeHtml(catName)}
+        </strong>
+
+      </div>
+    `;
+  }).join("");
+}
+
+
+/* =========================
+   OFFERS & DYNAMIC SETTINGS
+========================= */
+
+function loadOfferAndSettings(){
+  const offer = loadLocal("careOffer", {
+    title: "Care Online-এ বিশেষ ছাড়!",
+    text: "প্রয়োজনীয় Medicine ও Personal Care Product এখন সহজেই অর্ডার করুন।",
+    button: "এখনই শপ করুন →"
+  });
+
+  const offerTitleEl = document.getElementById("offerTitle");
+  const offerTextEl = document.getElementById("offerText");
+  const offerBtnEl = document.getElementById("offerBtn");
+
+  if(offerTitleEl) offerTitleEl.textContent = offer.title;
+  if(offerTextEl) offerTextEl.textContent = offer.text;
+  if(offerBtnEl && offer.button) offerBtnEl.textContent = offer.button;
+
+  // Sync Store Settings from Admin
+  const storeSettings = loadLocal("careSettings", {
+    supportPhone: "01892291817",
+    facebookUrl: "https://www.facebook.com/share/1CYp2sUvdg/"
+  });
+
+  const waNum = storeSettings.supportPhone || "01892291817";
+  const cleanWaNum = waNum.replace(/[^0-9]/g, '');
+  const finalWa = cleanWaNum.startsWith('88') ? cleanWaNum : ('88' + cleanWaNum);
+  const fbUrl = storeSettings.facebookUrl || "https://www.facebook.com/share/1CYp2sUvdg/";
+
+  // Apply links
+  const floatWa = document.getElementById("floatWhatsapp");
+  const floatFb = document.getElementById("floatFacebook");
+  const headerFb = document.getElementById("headerFbLink");
+  const headerWa = document.getElementById("headerWaLink");
+  const presWa = document.getElementById("prescriptionWaBtn");
+  const footWa = document.getElementById("footerWaBtn");
+  const footWaText = document.getElementById("footerWaText");
+  const footFb = document.getElementById("footerFbBtn");
+  const accWa = document.getElementById("accountWaBtn");
+
+  if(floatWa) floatWa.href = `https://wa.me/${finalWa}?text=Hello%20Care%20Online,%20আমি%20একটি%20প্রোডাক্ট/ঔষধ%20সম্পর্কে%20জানতে%20চাই।`;
+  if(floatFb) floatFb.href = fbUrl;
+  if(headerFb) headerFb.href = fbUrl;
+  if(headerWa) headerWa.href = `https://wa.me/${finalWa}`;
+  if(presWa) presWa.href = `https://wa.me/${finalWa}?text=Hello%20Care%20Online,%20আমি%20প্রেসক্রিপশন%20পাঠিয়ে%20অর্ডার%20করতে%20চাই।`;
+  if(footWa) footWa.href = `https://wa.me/${finalWa}`;
+  if(footWaText) footWaText.textContent = waNum;
+  if(footFb) footFb.href = fbUrl;
+  if(accWa) accWa.href = `https://wa.me/${finalWa}`;
+
+  populateDivisions();
+}
+
+
+function populateDivisions(){
+  const divSelect = document.getElementById("customerDivision");
+  if(!divSelect) return;
+
+  divSelect.innerHTML = `<option value="">বিভাগ সিলেক্ট করুন</option>`;
+  Object.keys(bdLocations).forEach(division => {
+    const opt = document.createElement("option");
+    opt.value = division;
+    opt.textContent = division;
+    divSelect.appendChild(opt);
+  });
+}
+
+function onDivisionChange(){
+  const divSelect = document.getElementById("customerDivision");
+  const distSelect = document.getElementById("customerDistrict");
+  const selectedDiv = divSelect.value;
+
+  distSelect.innerHTML = `<option value="">জেলা সিলেক্ট করুন</option>`;
+
+  if(selectedDiv && bdLocations[selectedDiv]){
+    bdLocations[selectedDiv].forEach(district => {
+      const opt = document.createElement("option");
+      opt.value = district;
+      opt.textContent = district;
+      distSelect.appendChild(opt);
+    });
+  }
+
+  updateCheckoutSummary();
+}
+
+
+function updateCheckoutPaymentNumber(){
+  const paymentSettings = loadLocal("carePaymentSettings", {
+    bkash: "01892291817",
+    nagad: "01892291817",
+    rocket: "01892291817"
+  });
+
+  const method = document.getElementById("paymentMethod")?.value || "bKash";
+  const numDisplay = document.getElementById("paymentNumber");
+  const nameDisplay = document.getElementById("paymentMethodName");
+  const txnGroup = document.getElementById("txnGroup");
+
+  if(method === "Cash on Delivery"){
+    if(numDisplay) numDisplay.textContent = "ক্যাশ অন ডেলিভারি";
+    if(nameDisplay) nameDisplay.textContent = "পণ্য হাতে পেয়ে মূল্য পরিশোধ করুন";
+    if(txnGroup) txnGroup.style.display = "none";
+  }else{
+    if(txnGroup) txnGroup.style.display = "block";
+    const num = paymentSettings[method.toLowerCase()] || paymentSettings.bkash || "01892291817";
+    if(numDisplay) numDisplay.textContent = num;
+    if(nameDisplay) nameDisplay.textContent = `${method} (Personal)`;
+  }
+}
+
+
+/* =========================
+   RENDER PRODUCTS
+========================= */
+
+function renderProducts(){
+  const grid = document.getElementById("productGrid");
+  const input = document.getElementById("searchInput");
+  const search = (input?.value || "").toLowerCase();
+
+  const filtered = products.filter(product => {
+    if(product.status && product.status === "inactive") return false;
+
+    const name = String(product.name || "").toLowerCase();
+    const category = String(product.category || "").toLowerCase();
+
+    return (
+      name.includes(search) ||
+      category.includes(search)
+    );
+  });
+
+  if(!filtered.length){
+    grid.innerHTML = `
+      <div class="empty">
+        কোনো Product পাওয়া যায়নি।
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(product => {
+    const oldP = product.oldPrice || product.old_price;
+    return `
+      <div class="product">
+
+        <div
+          class="product-image"
+          onclick="showProduct(${product.id})">
+
+          ${
+            product.image
+            ?
+            `<img
+              src="${escapeAttr(product.image)}"
+              alt="${escapeAttr(product.name)}"
+              onerror="this.parentElement.innerHTML='📦'">`
+            :
+            "📦"
+          }
+
+        </div>
+
+        <div class="product-info">
+
+          <div class="product-name">
+            ${escapeHtml(product.name)}
+          </div>
+
+          <div class="price">
+            ৳${Number(product.price || 0).toFixed(0)}
+            ${
+              oldP
+              ?
+              `<span class="old-price">
+                ৳${oldP}
+              </span>`
+              : ""
+            }
+          </div>
+
+          <div style="
+            font-size:10px;
+            color:#777;
+            margin-top:4px;
+          ">
+            ${escapeHtml(product.category || "")}
+          </div>
+
+          <div class="product-buttons">
+            <button
+              class="add"
+              onclick="addToCart(${product.id})">
+              🛒 Add
+            </button>
+
+            <button
+              class="buy"
+              onclick="buyNow(${product.id})">
+              Buy Now
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    `;
+  }).join("");
+}
+
+
+/* =========================
+   FILTER
+========================= */
+
+function filterCategory(category){
+  document.getElementById("searchInput").value = category;
+  renderProducts();
+  scrollToProducts();
+}
+
+function scrollToProducts(){
+  document.getElementById("productsSection").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+
+
+/* =========================
+   CART
+========================= */
+
+function saveCart(){
+  localStorage.setItem("careCart", JSON.stringify(cart));
+  updateCartCount();
+}
+
+function updateCartCount(){
+  const count = cart.reduce(
+    (total, item) => total + Number(item.quantity || 0),
+    0
+  );
+  document.getElementById("cartCount").textContent = count;
+}
+
+function addToCart(id){
+  const product = products.find(p => p.id === id);
+  if(!product) return;
+
+  const existing = cart.find(item => item.id === id);
+
+  if(existing){
+    existing.quantity++;
+  }else{
+    cart.push({
+      id: product.id,
+      name: product.name,
+      price: Number(product.price || 0),
+      image: product.image || "",
+      quantity: 1
+    });
+  }
+
+  saveCart();
+  alert("Product Cart-এ যোগ হয়েছে।");
+}
+
+function removeFromCart(id){
+  cart = cart.filter(item => item.id !== id);
+  saveCart();
+  renderCart();
+}
+
+function changeQty(id, change){
+  const item = cart.find(item => item.id === id);
+  if(!item) return;
+
+  item.quantity += change;
+
+  if(item.quantity <= 0){
+    removeFromCart(id);
+    return;
+  }
+
+  saveCart();
+  renderCart();
+}
+
+function renderCart(){
+  const container = document.getElementById("cartItems");
+
+  if(!cart.length){
+    container.innerHTML = `
+      <div class="empty">
+        আপনার Cart খালি।
+      </div>
+    `;
+    document.getElementById("cartTotal").textContent = "৳0";
+    return;
+  }
+
+  let total = 0;
+
+  container.innerHTML = cart.map(item => {
+    const itemTotal = item.price * item.quantity;
+    total += itemTotal;
+
+    return `
+      <div class="cart-item">
+        <div>
+          <strong>${escapeHtml(item.name)}</strong><br>
+          <small>৳${item.price}</small>
+        </div>
+
+        <div class="qty">
+          <button onclick="changeQty(${item.id},-1)">−</button>
+          <span>${item.quantity}</span>
+          <button onclick="changeQty(${item.id},1)">+</button>
+          <button
+            onclick="removeFromCart(${item.id})"
+            style="
+              border:0;
+              background:#ffe7e7;
+              color:#c62828;
+              padding:7px;
+              border-radius:6px;
+            ">✕</button>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  document.getElementById("cartTotal").textContent = "৳" + total;
+}
+
+function openCart(button){
+  if(button) setActive(button);
+  renderCart();
+  showModal("cartModal");
+}
+
+
+/* =========================
+   BUY NOW
+========================= */
+
+function buyNow(id){
+  const product = products.find(p => p.id === id);
+  if(!product) return;
+
+  cart = [{
+    id: product.id,
+    name: product.name,
+    price: Number(product.price || 0),
+    image: product.image || "",
+    quantity: 1
+  }];
+
+  saveCart();
+  openCheckout();
+}
+
+
+/* =========================
+   CHECKOUT (CALCULATIONS)
+========================= */
+
+function updateCheckoutSummary(){
+  const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const settings = loadLocal("careSettings", {
+    deliveryCharge: "60",
+    freeDelivery: "1000"
+  });
+
+  const division = document.getElementById("customerDivision")?.value || "";
+  
+  let deliveryFee = Number(settings.deliveryCharge || 60);
+  if(division && !division.includes("ঢাকা")){
+    deliveryFee = 120;
+  }
+
+  const freeThreshold = Number(settings.freeDelivery || 1000);
+  if(subtotal >= freeThreshold && freeThreshold > 0){
+    deliveryFee = 0;
+  }
+
+  const grandTotal = subtotal + deliveryFee;
+
+  document.getElementById("summarySubtotal").textContent = `৳${subtotal}`;
+  document.getElementById("summaryDelivery").textContent = deliveryFee === 0 ? "ফ্রি (Free)" : `৳${deliveryFee}`;
+  document.getElementById("summaryGrandTotal").textContent = `৳${grandTotal}`;
+
+  return { subtotal, deliveryFee, grandTotal };
+}
+
+function openCheckout(){
+  if(!cart.length){
+    alert("আগে Product Cart-এ যোগ করুন।");
+    return;
+  }
+
+  closeModal("cartModal");
+
+  // Autofill currently logged in user info
+  if(currentUser){
+    document.getElementById("customerName").value = currentUser.name || "";
+    document.getElementById("customerPhone").value = currentUser.phone || "";
+  }
+
+  document.getElementById("transactionId").value = "";
+
+  updateCheckoutPaymentNumber();
+  updateCheckoutSummary();
+  showModal("checkoutModal");
+}
+
+document.getElementById("checkoutForm").addEventListener("submit", function(event){
+  event.preventDefault();
+
+  if(!cart.length){
+    alert("Cart খালি।");
+    return;
+  }
+
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const division = document.getElementById("customerDivision").value;
+  const district = document.getElementById("customerDistrict").value;
+  const homeAddress = document.getElementById("customerAddress").value.trim();
+  const paymentMethod = document.getElementById("paymentMethod").value;
+  const transactionId = document.getElementById("transactionId").value.trim();
+
+  if(!division || !district){
+    alert("অনুগ্রহ করে আপনার বিভাগ এবং জেলা সিলেক্ট করুন।");
+    return;
+  }
+
+  const fullAddress = `${division}, ${district} — ${homeAddress}`;
+  const { subtotal, deliveryFee, grandTotal } = updateCheckoutSummary();
+  const orderId = "CO" + Date.now().toString().slice(-8);
+
+  const order = {
+    orderId,
+    customerName: name,
+    customerPhone: phone,
+    customerEmail: (currentUser && currentUser.email) ? currentUser.email : "",
+    customerAddress: fullAddress,
+    division,
+    district,
+    subtotal,
+    deliveryFee,
+    total: grandTotal,
+    paymentMethod,
+    transactionId: transactionId || "N/A",
+    items: [...cart],
+    orderStatus: "pending",
+    paymentStatus: paymentMethod === "Cash on Delivery" ? "pending" : (transactionId ? "submitted" : "pending"),
+    createdAt: new Date().toISOString()
+  };
+
+  // 1. Save to Global Admin Orders List
+  let allOrders = loadLocal("careOnlineOrders", []);
+  allOrders.push(order);
+  localStorage.setItem("careOnlineOrders", JSON.stringify(allOrders));
+  localStorage.setItem("careOnlineOrder", JSON.stringify(order));
+
+  // 2. If user wasn't logged in, login session created strictly for this phone
+  if(!currentUser){
+    currentUser = {
+      name: name,
+      phone: phone,
+      email: ""
+    };
+    localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
+  }
+
+  cart = [];
+  saveCart();
+  closeModal("checkoutModal");
+
+  alert("অর্ডার সফল হয়েছে! আপনার Order ID: " + orderId);
+
+  // ওপেন একাউন্ট (শুধুমাত্র এই ইউজারের অর্ডার দেখাবে)
+  openAccount();
+});
+
+
+/* =========================
+   TRACK ORDER (MANUAL ID)
+========================= */
+
+function openTrack(button){
+  if(button) setActive(button);
+  showModal("trackModal");
+}
+
+function trackOrder(event){
+  event.preventDefault();
+  const orderId = document.getElementById("trackOrderId").value.trim();
+  trackOrderDirect(orderId);
+}
+
+function trackOrderDirect(orderId){
+  const result = document.getElementById("trackResult");
+  if(!orderId){
+    result.innerHTML = `<div class="empty">Order ID দিন।</div>`;
+    return;
+  }
+
+  const allOrders = loadLocal("careOnlineOrders", []);
+  const single = loadLocal("careOnlineOrder", null);
+
+  let order = allOrders.find(o => String(o.orderId).trim() === orderId);
+  if(!order && single && single.orderId === orderId){
+    order = single;
+  }
+
+  if(order){
+    renderTrackResult(order);
+  }else{
+    result.innerHTML = `
+      <div class="empty">
+        ❌ Order পাওয়া যায়নি।
+      </div>
+    `;
+  }
+}
+
+function renderTrackResult(order){
+  const result = document.getElementById("trackResult");
+  const status = order.orderStatus || order.order_status || "pending";
+
+  result.innerHTML = `
+    <div class="track-result">
+      <strong>Order ID:</strong> ${escapeHtml(order.orderId || "")}<br><br>
+      <strong>Customer:</strong> ${escapeHtml(order.customerName || "")}<br>
+      <strong>ঠিকানা:</strong> ${escapeHtml(order.customerAddress || "")}<br>
+      <strong>Total:</strong> ৳${order.total || 0}<br>
+      <strong>Payment:</strong> ${escapeHtml(order.paymentStatus || "pending")}<br>
+      <strong>Status:</strong>
+      <div class="status ${escapeHtml(status)}">${escapeHtml(status)}</div>
+
+      <div class="track-line">
+        📝 Order Received ${statusStep(status, 1)}<br>
+        💳 Payment Confirmed ${statusStep(status, 2)}<br>
+        📦 Processing ${statusStep(status, 3)}<br>
+        🚚 Shipped ${statusStep(status, 4)}<br>
+        🏠 Delivered ${statusStep(status, 5)}
+      </div>
+    </div>
+  `;
+}
+
+function statusStep(status, step){
+  const levels = {
+    pending: 1,
+    confirmed: 2,
+    processing: 3,
+    shipped: 4,
+    delivered: 5,
+    cancelled: 0
+  };
+  return ((levels[status] || 1) >= step ? " ✓" : "");
+}
+
+
+/* =========================
+   ACCOUNT & STRICT USER ORDERS
+========================= */
+
+function openAccount(button){
+  if(button) setActive(button);
+  updateAccountUI();
+  showModal("accountModal");
+}
+
+function getStatusText(status){
+  switch(status){
+    case "pending": return "⏳ পেন্ডিং (অর্ডারের অপেক্ষায়)";
+    case "confirmed": return "💳 কনফার্মড (পেমেন্ট ভেরিফাইড)";
+    case "processing": return "📦 প্রসেসিং (প্রস্তুত হচ্ছে)";
+    case "shipped": return "🚚 শিফটিং (ডেলিভারির পথে)";
+    case "delivered": return "🏠 ডেলিভারি সম্পন্ন";
+    case "cancelled": return "❌ বাতিল হয়েছে";
+    default: return status;
+  }
+}
+
+/* STRICT USER ORDER FILTER - শুধুমাত্র বর্তমান লগইন ইউজারের অর্ডার ফিল্টার হবে */
+function renderUserOrders(){
+  const container = document.getElementById("userOrdersList");
+  if(!container) return;
+
+  if(!currentUser){
+    container.innerHTML = `
+      <div style="background:#f9f9f9; padding:15px; text-align:center; border-radius:9px; color:#777; font-size:12px; border:1px dashed #ddd;">
+        অর্ডার দেখতে আগে Login করুন।
+      </div>
+    `;
+    return;
+  }
+
+  const allOrders = loadLocal("careOnlineOrders", []);
+
+  // বর্তমানে লগইন থাকা ইউজারের ফোন নম্বর ও ইমেইল (স্পেস বা স্পেশাল ক্যারেক্টার ছাড়া)
+  const currentPhone = (currentUser.phone || "").replace(/[^0-9]/g, "");
+  const currentEmail = (currentUser.email || "").trim().toLowerCase();
+
+  // শুধুমাত্র এই ইউজারের করা অর্ডারগুলো ফিল্টার করা হচ্ছে
+  const userOrders = allOrders.filter(order => {
+    const orderPhone = (order.customerPhone || "").replace(/[^0-9]/g, "");
+    const orderEmail = (order.customerEmail || "").trim().toLowerCase();
+
+    const matchByPhone = (currentPhone && orderPhone) && (
+      orderPhone === currentPhone || 
+      orderPhone.endsWith(currentPhone.slice(-10)) || 
+      currentPhone.endsWith(orderPhone.slice(-10))
+    );
+
+    const matchByEmail = (currentEmail && orderEmail) && (orderEmail === currentEmail);
+
+    return matchByPhone || matchByEmail;
+  }).reverse();
+
+  if(!userOrders.length){
+    container.innerHTML = `
+      <div style="background:#f9f9f9; padding:18px 12px; text-align:center; border-radius:9px; color:#777; font-size:13px; border:1px dashed #ddd;">
+        আপনার একাউন্ট থেকে এখনও কোনো অর্ডার করা হয়নি।
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = userOrders.map(order => {
+    const status = order.orderStatus || "pending";
+    const itemsSummary = (order.items || []).map(i => `${escapeHtml(i.name)} × ${i.quantity}`).join(", ");
+    
+    return `
+      <div style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px; margin-bottom:10px; box-shadow:0 1px 4px rgba(0,0,0,0.04);">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
+          <strong style="color:#087f5b; font-size:13px;">ID: ${escapeHtml(order.orderId)}</strong>
+          <span class="status ${escapeHtml(status)}">${escapeHtml(status)}</span>
+        </div>
+        
+        <div style="font-size:12px; color:#444; line-height:1.6;">
+          <strong>🛍️ প্রোডাক্ট:</strong> ${itemsSummary || 'Medicine & Personal Care'}<br>
+          <strong>📍 ঠিকানা:</strong> ${escapeHtml(order.customerAddress || '')}<br>
+          <strong>💰 সর্বমোট:</strong> ৳${order.total || 0} (${escapeHtml(order.paymentMethod || 'bKash')})<br>
+          <small style="color:#777;">📅 তারিখ: ${new Date(order.createdAt || Date.now()).toLocaleDateString('bn-BD')}</small>
+        </div>
+
+        <div style="margin-top:8px; padding-top:8px; border-top:1px solid #f0f0f0; font-size:12px; color:#087f5b; font-weight:bold;">
+          📍 বর্তমান অবস্থা: ${getStatusText(status)}
+        </div>
+      </div>
+    `;
+  }).join("");
+}
+
+function updateAccountUI(){
+  const login = document.getElementById("loginSection");
+  const register = document.getElementById("registerSection");
+  const logged = document.getElementById("loggedInSection");
+
+  if(currentUser){
+    login.style.display = "none";
+    register.style.display = "none";
+    logged.style.display = "block";
+
+    const userName = currentUser.name || "সম্মানিত গ্রাহক";
+    document.getElementById("userName").textContent = userName;
+    document.getElementById("userContact").textContent = currentUser.phone || currentUser.email || "";
+    
+    const firstLetter = userName.trim().charAt(0).toUpperCase() || "U";
+    document.getElementById("userAvatar").textContent = firstLetter;
+    
+    renderUserOrders();
+  }else{
+    login.style.display = "block";
+    register.style.display = "none";
+    logged.style.display = "none";
+  }
+}
+
+function showLogin(){
+  document.getElementById("loginSection").style.display = "block";
+  document.getElementById("registerSection").style.display = "none";
+  document.getElementById("loggedInSection").style.display = "none";
+}
+
+function showRegister(){
+  document.getElementById("loginSection").style.display = "none";
+  document.getElementById("registerSection").style.display = "block";
+  document.getElementById("loggedInSection").style.display = "none";
+}
+
+function loginUser(){
+  const identifier = document.getElementById("loginIdentifier").value.trim();
+  const password = document.getElementById("loginPassword").value;
+
+  if(!identifier){
+    alert("ফোন নম্বর অথবা ইমেইল দিন।");
+    return;
+  }
+  if(!password){
+    alert("Password দিন।");
+    return;
+  }
+
+  const cleanId = identifier.replace(/[^0-9]/g, "");
+  const users = loadLocal("careUsers", []);
+
+  // Check matching registered user
+  const user = users.find(u => {
+    const userPhoneClean = (u.phone || "").replace(/[^0-9]/g, "");
+    const userEmail = (u.email || "").trim().toLowerCase();
+    const isIdMatch = (userPhoneClean && (userPhoneClean === cleanId || userPhoneClean.endsWith(cleanId.slice(-10)))) || (userEmail && userEmail === identifier.toLowerCase());
+    return isIdMatch && u.password === password;
+  });
+
+  if(user){
+    currentUser = user;
+  }else{
+    // If not found in previous registered array, create session strictly with this phone/email
+    currentUser = { 
+      name: identifier.includes('@') ? identifier.split('@')[0] : `User (${identifier})`, 
+      phone: identifier.includes('@') ? '' : identifier,
+      email: identifier.includes('@') ? identifier : ''
+    };
+  }
+
+  localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
+  updateAccountUI();
+  alert("স্বাগতম! আপনি সফলভাবে লগইন করেছেন।");
+}
+
+function registerUser(){
+  const name = document.getElementById("registerName").value.trim();
+  const phone = document.getElementById("registerPhone").value.trim();
+  const email = document.getElementById("registerEmail").value.trim();
+  const password = document.getElementById("registerPassword").value;
+
+  if(!name || !phone || !password){
+    alert("নাম, ফোন নম্বর এবং পাসওয়ার্ড পূরণ করুন।");
+    return;
+  }
+  if(password.length < 6){
+    alert("পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।");
+    return;
+  }
+
+  const users = loadLocal("careUsers", []);
+  const newUser = { name, phone, email, password };
+  users.push(newUser);
+  localStorage.setItem("careUsers", JSON.stringify(users));
+
+  currentUser = newUser;
+  localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
+  updateAccountUI();
+  alert("আপনার একাউন্ট সফলভাবে তৈরি হয়েছে!");
+}
+
+function logoutUser(){
+  currentUser = null;
+  localStorage.removeItem("careOnlineUser");
+  showLogin();
+  alert("আপনি Logout করেছেন।");
+}
+
+function openTrackFromAccount(){
+  closeModal("accountModal");
+  openTrack();
+}
+
+
+/* =========================
+   PRODUCT DETAILS
+========================= */
+
+function showProduct(id){
+  const product = products.find(p => p.id === id);
+  if(!product) return;
+
+  const storeSettings = loadLocal("careSettings", { supportPhone: "01892291817" });
+  const waNum = (storeSettings.supportPhone || "01892291817").replace(/[^0-9]/g, '');
+  const finalWa = waNum.startsWith('88') ? waNum : ('88' + waNum);
+
+  const waMessage = encodeURIComponent(`Hello Care Online, আমি এই প্রোডাক্টটি সম্পর্কে জানতে চাই: ${product.name} (মূল্য: ৳${product.price})`);
+
+  document.getElementById("detailName").textContent = product.name;
+  document.getElementById("productDetails").innerHTML = `
+    <div class="product-image">
+      ${
+        product.image
+        ? `<img src="${escapeAttr(product.image)}" alt="${escapeAttr(product.name)}" onerror="this.parentElement.innerHTML='📦'">`
+        : "📦"
+      }
+    </div>
+    <br>
+    <h3 style="color:#087f5b; font-size:20px;">৳${product.price}</h3>
+    <p style="margin-top:10px; color:#666; line-height:1.6; font-size:13px;">
+      ${escapeHtml(product.description || "উন্নত মানের নির্ভরযোগ্য প্রোডাক্ট।")}
+    </p>
+    <br>
+
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <button
+        class="primary-btn"
+        onclick="addToCart(${product.id}); closeModal('productModal');">
+        🛒 Add to Cart
+      </button>
+
+      <a
+        href="https://wa.me/${finalWa}?text=${waMessage}"
+        target="_blank"
+        style="
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          gap:6px;
+          background:#25D366;
+          color:#fff;
+          padding:12px;
+          border-radius:9px;
+          font-weight:bold;
+          text-decoration:none;
+          font-size:14px;
+        ">
+        <svg viewBox="0 0 24 24" style="fill:#fff; width:18px; height:18px;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        WhatsApp-এ জিজ্ঞাসা করুন
+      </a>
+    </div>
+  `;
+
+  showModal("productModal");
+}
+
+
+/* =========================
+   NAV
+========================= */
+
+function goHome(button){
+  if(button) setActive(button);
+  document.getElementById("searchInput").value = "";
+  renderProducts();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+}
+
+function setActive(button){
+  document.querySelectorAll(".nav-item").forEach(item => {
+    item.classList.remove("active");
+  });
+  if(button) button.classList.add("active");
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+function showModal(id){
+  document.getElementById(id).classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal(id){
+  document.getElementById(id).classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+function closeOnOutside(event, id){
+  if(event.target.id === id){
+    closeModal(id);
+  }
+}
+
+
+/* =========================
+   HELPERS
+========================= */
+
+function escapeHtml(value){
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function escapeAttr(value){
+  return escapeHtml(value);
+}
+
+
+/* =========================
+   INIT
+========================= */
+
+updateCartCount();
+updateAccountUI();
+loadOfferAndSettings();
+loadCategories();
+loadProducts();
+
+</script>
+
+</body>
+  </html>
