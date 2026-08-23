@@ -36,10 +36,7 @@ button{
   cursor:pointer;
 }
 
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 .header{
   position:sticky;
   top:0;
@@ -148,20 +145,14 @@ button{
   color:#777;
 }
 
-/* =========================
-   MAIN
-========================= */
-
+/* MAIN */
 .container{
   max-width:1100px;
   margin:auto;
   padding:15px;
 }
 
-/* =========================
-   OFFER & PRESCRIPTION BANNER
-========================= */
-
+/* OFFER & PRESCRIPTION BANNER */
 .offer{
   background:linear-gradient(135deg, #087f5b, #12a979);
   color:#fff;
@@ -219,7 +210,6 @@ button{
   font-weight:bold;
 }
 
-/* PRESCRIPTION CARD */
 .prescription-card{
   background:#fff;
   border:1px solid #d4edda;
@@ -268,10 +258,7 @@ button{
   height:16px;
 }
 
-/* =========================
-   SECTION
-========================= */
-
+/* SECTION & GRID */
 .section{
   margin-bottom:25px;
 }
@@ -294,10 +281,6 @@ button{
   font-size:12px;
   font-weight:bold;
 }
-
-/* =========================
-   CATEGORY
-========================= */
 
 .category-grid{
   display:grid;
@@ -330,10 +313,6 @@ button{
   justify-content:center;
   font-size:25px;
 }
-
-/* =========================
-   PRODUCT
-========================= */
 
 .product-grid{
   display:grid;
@@ -417,10 +396,7 @@ button{
   color:#087f5b;
 }
 
-/* =========================
-   TRUST BADGES
-========================= */
-
+/* TRUST BADGES & FOOTER */
 .trust-features{
   display:grid;
   grid-template-columns:repeat(2,1fr);
@@ -452,10 +428,6 @@ button{
   font-size:11px;
   color:#777;
 }
-
-/* =========================
-   FOOTER
-========================= */
 
 .footer{
   background:#fff;
@@ -522,10 +494,7 @@ button{
   color:#888;
 }
 
-/* =========================
-   FLOATING BUTTONS
-========================= */
-
+/* FLOATING BUTTONS */
 .floating-support{
   position:fixed;
   right:15px;
@@ -562,10 +531,7 @@ button{
   background:#1877F2;
 }
 
-/* =========================
-   BOTTOM NAV
-========================= */
-
+/* BOTTOM NAV */
 .bottom-nav{
   position:fixed;
   left:0;
@@ -601,10 +567,7 @@ button{
   font-weight:bold;
 }
 
-/* =========================
-   MODAL
-========================= */
-
+/* MODAL */
 .modal{
   display:none;
   position:fixed;
@@ -631,12 +594,8 @@ button{
 }
 
 @keyframes slideUp{
-  from{
-    transform:translateY(100%);
-  }
-  to{
-    transform:translateY(0);
-  }
+  from{ transform:translateY(100%); }
+  to{ transform:translateY(0); }
 }
 
 .modal-head{
@@ -659,10 +618,36 @@ button{
   font-size:18px;
 }
 
-/* =========================
-   CART
-========================= */
+/* QUANTITY CONTROLLER */
+.qty-controller{
+  display:inline-flex;
+  align-items:center;
+  background:#eef7f3;
+  border-radius:8px;
+  padding:4px;
+  gap:10px;
+}
 
+.qty-controller button{
+  width:32px;
+  height:32px;
+  border:0;
+  background:#fff;
+  color:#087f5b;
+  font-weight:bold;
+  font-size:16px;
+  border-radius:6px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+
+.qty-controller span{
+  font-weight:bold;
+  font-size:15px;
+  min-width:24px;
+  text-align:center;
+}
+
+/* CART & CHECKOUT */
 .cart-item{
   display:flex;
   justify-content:space-between;
@@ -672,21 +657,6 @@ button{
   padding:12px 0;
 }
 
-.qty{
-  display:flex;
-  align-items:center;
-  gap:7px;
-}
-
-.qty button{
-  width:30px;
-  height:30px;
-  border:0;
-  border-radius:7px;
-  background:#e7f5ef;
-  color:#087f5b;
-}
-
 .total{
   display:flex;
   justify-content:space-between;
@@ -694,10 +664,6 @@ button{
   font-size:18px;
   margin:18px 0;
 }
-
-/* =========================
-   FORM & CHECKOUT
-========================= */
 
 .form-group{
   margin-bottom:13px;
@@ -792,10 +758,7 @@ button{
   margin-top:6px;
 }
 
-/* =========================
-   ACCOUNT (DARAZ STYLE PROFILE)
-========================= */
-
+/* ACCOUNT & OTP */
 .account-tabs{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -866,10 +829,16 @@ button{
   margin-top:4px;
 }
 
-/* =========================
-   TRACK
-========================= */
+.otp-box{
+  background:#fff8e6;
+  border:1px solid #ffd591;
+  padding:14px;
+  border-radius:10px;
+  margin-bottom:14px;
+  text-align:center;
+}
 
+/* TRACK */
 .track-result{
   background:#fff;
   border-radius:12px;
@@ -888,25 +857,10 @@ button{
   font-weight:bold;
 }
 
-.status.confirmed, .status.delivered{
-  background:#e7f6ec;
-  color:#218838;
-}
-
-.status.processing{
-  background:#e8f0ff;
-  color:#2458a6;
-}
-
-.status.shipped{
-  background:#fff0df;
-  color:#a75b00;
-}
-
-.status.cancelled{
-  background:#ffe7e7;
-  color:#c62828;
-}
+.status.confirmed, .status.delivered{ background:#e7f6ec; color:#218838; }
+.status.processing{ background:#e8f0ff; color:#2458a6; }
+.status.shipped{ background:#fff0df; color:#a75b00; }
+.status.cancelled{ background:#ffe7e7; color:#c62828; }
 
 .track-line{
   margin-top:15px;
@@ -921,32 +875,15 @@ button{
   color:#777;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
+/* RESPONSIVE */
 @media(min-width:700px){
-
-  .category-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .product-grid{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .trust-features{
-    grid-template-columns:repeat(4,1fr);
-  }
-
-  .product-image{
-    height:180px;
-  }
-
+  .category-grid{ grid-template-columns:repeat(4,1fr); }
+  .product-grid{ grid-template-columns:repeat(4,1fr); }
+  .trust-features{ grid-template-columns:repeat(4,1fr); }
+  .product-image{ height:180px; }
 }
 
 @media(min-width:801px){
-
   .bottom-nav{
     max-width:600px;
     left:50%;
@@ -955,258 +892,102 @@ button{
     transform:translateX(-50%);
     border-radius:15px 15px 0 0;
   }
-
 }
 
 @media(max-width:400px){
-
-  .logo{
-    font-size:17px;
-  }
-
-  .product-image{
-    height:135px;
-  }
-
-  .product-info{
-    padding:9px;
-  }
-
-  .product-name{
-    font-size:12px;
-  }
-
-  .form-row{
-    grid-template-columns:1fr;
-  }
-
-  .prescription-card{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
+  .logo{ font-size:17px; }
+  .product-image{ height:135px; }
+  .product-info{ padding:9px; }
+  .product-name{ font-size:12px; }
+  .form-row{ grid-template-columns:1fr; }
+  .prescription-card{ flex-direction:column; align-items:flex-start; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- =========================
-     FLOATING SUPPORT
-========================= -->
-
+<!-- FLOATING SUPPORT -->
 <div class="floating-support">
-
-  <!-- WhatsApp Support -->
-  <a
-    id="floatWhatsapp"
-    href="https://wa.me/8801892291817?text=Hello%20Care%20Online,%20আমি%20একটি%20প্রোডাক্ট/ঔষধ%20সম্পর্কে%20জানতে%20চাই।"
-    target="_blank"
-    class="float-btn whatsapp"
-    title="WhatsApp Support">
+  <a id="floatWhatsapp" href="https://wa.me/8801892291817" target="_blank" class="float-btn whatsapp" title="WhatsApp Support">
     <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
   </a>
-
-  <!-- Facebook Page -->
-  <a
-    id="floatFacebook"
-    href="https://www.facebook.com/share/1CYp2sUvdg/"
-    target="_blank"
-    class="float-btn facebook"
-    title="Facebook Page">
+  <a id="floatFacebook" href="https://www.facebook.com/share/1CYp2sUvdg/" target="_blank" class="float-btn facebook" title="Facebook Page">
     <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
   </a>
-
 </div>
 
-
-<!-- =========================
-     HEADER
-========================= -->
-
+<!-- HEADER -->
 <header class="header">
-
   <div class="header-top">
-
     <div class="logo-area" onclick="goHome()">
-
-      <div class="logo-icon">
-        💚
-      </div>
-
+      <div class="logo-icon">💚</div>
       <div>
-
-        <div class="logo">
-          Care Online
-        </div>
-
-        <div class="logo-subtitle">
-          Medicine & Personal Care
-        </div>
-
+        <div class="logo">Care Online</div>
+        <div class="logo-subtitle">Medicine & Personal Care</div>
       </div>
-
     </div>
 
     <div class="header-actions">
-
-      <!-- Facebook Link -->
-      <a
-        id="headerFbLink"
-        href="https://www.facebook.com/share/1CYp2sUvdg/"
-        target="_blank"
-        class="header-icon-btn"
-        title="Facebook Page">
+      <a id="headerFbLink" href="https://www.facebook.com/share/1CYp2sUvdg/" target="_blank" class="header-icon-btn" title="Facebook Page">
         <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
       </a>
-
-      <!-- WhatsApp Link -->
-      <a
-        id="headerWaLink"
-        href="https://wa.me/8801892291817"
-        target="_blank"
-        class="header-icon-btn"
-        title="WhatsApp">
+      <a id="headerWaLink" href="https://wa.me/8801892291817" target="_blank" class="header-icon-btn" title="WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
       </a>
-
-      <button
-        class="header-icon-btn"
-        onclick="openAccount()"
-        title="Account">
-        👤
-      </button>
-
-      <button
-        class="cart-btn"
-        onclick="openCart()">
-        🛒 <span id="cartCount">0</span>
-      </button>
-
+      <button class="header-icon-btn" onclick="openAccount()" title="Account">👤</button>
+      <button class="cart-btn" onclick="openCart()">🛒 <span id="cartCount">0</span></button>
     </div>
-
   </div>
 
   <div class="search-box">
-
-    <span class="search-icon">
-      🔍
-    </span>
-
-    <input
-      id="searchInput"
-      type="search"
-      placeholder="Medicine, personal care খুঁজুন..."
-      oninput="renderProducts()">
-
+    <span class="search-icon">🔍</span>
+    <input id="searchInput" type="search" placeholder="Medicine, personal care খুঁজুন..." oninput="renderProducts()">
   </div>
-
 </header>
 
-
 <main class="container">
-
-  <!-- OFFER BANNER -->
-
+  <!-- DYNAMIC OFFER BANNER -->
   <section class="offer">
-
     <div class="offer-content">
-
-      <span class="offer-badge">
-        🔥 Special Offer
-      </span>
-
-      <h2 id="offerTitle">
-        Care Online-এ বিশেষ ছাড়!
-      </h2>
-
-      <p id="offerText">
-        প্রয়োজনীয় Medicine ও Personal Care
-        Product এখন সহজেই অর্ডার করুন।
-      </p>
-
-      <button id="offerBtn" onclick="scrollToProducts()">
-        এখনই শপ করুন →
-      </button>
-
+      <span class="offer-badge">🔥 Special Offer</span>
+      <h2 id="offerTitle">Care Online-এ বিশেষ ছাড়!</h2>
+      <p id="offerText">প্রয়োজনীয় Medicine ও Personal Care Product এখন সহজেই অর্ডার করুন।</p>
+      <button id="offerBtn" onclick="scrollToProducts()">এখনই শপ করুন →</button>
     </div>
-
   </section>
 
-
   <!-- PRESCRIPTION & WHATSAPP ORDER -->
-
   <section class="prescription-card">
-
     <div class="prescription-info">
       <h3>📋 প্রেসক্রিপশন দিয়ে অর্ডার করুন</h3>
       <p>প্রেসক্রিপশন বা যেকোনো ঔষধের ছবি তুলে আমাদের WhatsApp-এ পাঠান। আমাদের ফার্মাসিস্ট সাপোর্ট টিম সরাসরি অর্ডার কনফার্ম করবে।</p>
     </div>
-
-    <a
-      id="prescriptionWaBtn"
-      href="https://wa.me/8801892291817?text=Hello%20Care%20Online,%20আমি%20প্রেসক্রিপশন%20পাঠিয়ে%20অর্ডার%20করতে%20চাই।"
-      target="_blank"
-      class="whatsapp-action-btn">
+    <a id="prescriptionWaBtn" href="https://wa.me/8801892291817" target="_blank" class="whatsapp-action-btn">
       <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
       ছবি পাঠান WhatsApp-এ
     </a>
-
   </section>
-
 
   <!-- CATEGORIES -->
-
   <section class="section">
-
     <div class="section-head">
-
-      <h2>
-        Categories
-      </h2>
-
-      <button
-        class="see-all"
-        onclick="goHome()">
-        See All
-      </button>
-
+      <h2>Categories</h2>
+      <button class="see-all" onclick="goHome()">See All</button>
     </div>
-
-    <div
-      class="category-grid"
-      id="categoryGrid">
-    </div>
-
+    <div class="category-grid" id="categoryGrid"></div>
   </section>
-
 
   <!-- PRODUCTS -->
-
-  <section
-    class="section"
-    id="productsSection">
-
+  <section class="section" id="productsSection">
     <div class="section-head">
-
-      <h2>
-        Popular Products
-      </h2>
-
+      <h2>Popular Products</h2>
     </div>
-
-    <div
-      class="product-grid"
-      id="productGrid">
-    </div>
-
+    <div class="product-grid" id="productGrid"></div>
   </section>
 
-
   <!-- TRUST BADGES -->
-
   <section class="trust-features">
-
     <div class="trust-item">
       <span class="trust-icon">💊</span>
       <div class="trust-text">
@@ -1214,7 +995,6 @@ button{
         <span>অরিজিনাল ঔষধ ও কেয়ার</span>
       </div>
     </div>
-
     <div class="trust-item">
       <span class="trust-icon">🚚</span>
       <div class="trust-text">
@@ -1222,7 +1002,6 @@ button{
         <span>সারাদেশে হোম ডেলিভারি</span>
       </div>
     </div>
-
     <div class="trust-item">
       <span class="trust-icon">💵</span>
       <div class="trust-text">
@@ -1230,7 +1009,6 @@ button{
         <span>পণ্য হাতে পেয়ে পেমেন্ট</span>
       </div>
     </div>
-
     <div class="trust-item">
       <span class="trust-icon">🎧</span>
       <div class="trust-text">
@@ -1238,20 +1016,12 @@ button{
         <span>WhatsApp ও হেল্পলাইন</span>
       </div>
     </div>
-
   </section>
-
 </main>
 
-
-<!-- =========================
-     FOOTER
-========================= -->
-
+<!-- FOOTER -->
 <footer class="footer">
-
   <div class="footer-content">
-
     <div class="footer-brand">
       <h3>💚 Care Online</h3>
       <p>
@@ -1259,121 +1029,53 @@ button{
         ঘরে বসেই প্রয়োজনীয় ঔষধ, পার্সোনাল কেয়ার এবং স্বাস্থ্য সুরক্ষা সামগ্রী অর্ডার করুন নির্ভরযোগ্য ও নিরাপদ সেবায়।
       </p>
     </div>
-
     <div class="footer-links">
-
-      <a
-        id="footerWaBtn"
-        href="https://wa.me/8801892291817"
-        target="_blank"
-        class="footer-btn btn-wa">
+      <a id="footerWaBtn" href="https://wa.me/8801892291817" target="_blank" class="footer-btn btn-wa">
         💬 WhatsApp: <span id="footerWaText">01892291817</span>
       </a>
-
-      <a
-        id="footerFbBtn"
-        href="https://www.facebook.com/share/1CYp2sUvdg/"
-        target="_blank"
-        class="footer-btn btn-fb">
+      <a id="footerFbBtn" href="https://www.facebook.com/share/1CYp2sUvdg/" target="_blank" class="footer-btn btn-fb">
         📘 Facebook Official Page
       </a>
-
     </div>
-
     <div class="footer-bottom">
       &copy; 2025 Care Online. All rights reserved. | Developed for Reliable Health & Personal Care Service.
     </div>
-
   </div>
-
 </footer>
 
-
-<!-- =========================
-     BOTTOM NAVIGATION
-========================= -->
-
+<!-- BOTTOM NAVIGATION -->
 <nav class="bottom-nav">
-
-  <button
-    class="nav-item active"
-    onclick="goHome(this)">
-    <span>🏠</span>
-    Home
-  </button>
-
-  <button
-    class="nav-item"
-    onclick="openTrack(this)">
-    <span>📦</span>
-    Track Order
-  </button>
-
-  <button
-    class="nav-item"
-    onclick="openCart(this)">
-    <span>🛒</span>
-    Cart
-  </button>
-
-  <button
-    class="nav-item"
-    onclick="openAccount(this)">
-    <span>👤</span>
-    Account
-  </button>
-
+  <button class="nav-item active" onclick="goHome(this)"><span>🏠</span>Home</button>
+  <button class="nav-item" onclick="openTrack(this)"><span>📦</span>Track Order</button>
+  <button class="nav-item" onclick="openCart(this)"><span>🛒</span>Cart</button>
+  <button class="nav-item" onclick="openAccount(this)"><span>👤</span>Account</button>
 </nav>
 
-
-<!-- =========================
-     CART MODAL
-========================= -->
-
-<div
-  class="modal"
-  id="cartModal"
-  onclick="closeOnOutside(event,'cartModal')">
-
+<!-- CART MODAL -->
+<div class="modal" id="cartModal" onclick="closeOnOutside(event,'cartModal')">
   <div class="modal-box">
-
     <div class="modal-head">
       <h2>🛒 আপনার Cart</h2>
       <button class="close" onclick="closeModal('cartModal')">×</button>
     </div>
-
     <div id="cartItems"></div>
-
     <div class="total">
       <span>Total</span>
       <span id="cartTotal">৳0</span>
     </div>
-
-    <button class="primary-btn" onclick="openCheckout()">
-      অর্ডার করুন
-    </button>
-
+    <button class="primary-btn" onclick="openCheckout()">অর্ডার করুন</button>
   </div>
-
 </div>
 
-
-<!-- =========================
-     CHECKOUT
-========================= -->
-
+<!-- CHECKOUT -->
 <div class="modal" id="checkoutModal">
-
   <div class="modal-box">
-
     <div class="modal-head">
       <h2>অর্ডার কনফার্ম করুন</h2>
       <button class="close" onclick="closeModal('checkoutModal')">×</button>
     </div>
 
     <form id="checkoutForm">
-
-      <!-- গ্রাহকের তথ্য -->
       <div class="form-group">
         <label>আপনার পূর্ণ নাম</label>
         <input id="customerName" placeholder="আপনার নাম লিখুন" required>
@@ -1384,7 +1086,6 @@ button{
         <input id="customerPhone" type="tel" placeholder="018XXXXXXXX" required>
       </div>
 
-      <!-- এরিয়া সিলেকশন -->
       <div class="form-row">
         <div class="form-group">
           <label>বিভাগ (Division)</label>
@@ -1403,37 +1104,28 @@ button{
 
       <div class="form-group">
         <label>হোম এড্রেস / বিস্তারিত ঠিকানা</label>
-        <textarea
-          id="customerAddress"
-          placeholder="যেমন: বাড়ি নং ১২, রোড নং ৪, থানা/উপজেলা, ইউনিয়ন বা এলাকার নাম..."
-          required></textarea>
+        <textarea id="customerAddress" placeholder="যেমন: বাড়ি নং ১২, রোড নং ৪, থানা/উপজেলা, ইউনিয়ন বা এলাকার নাম..." required></textarea>
       </div>
 
-      <!-- দারাজ স্টাইল অর্ডার সামারি -->
       <div class="checkout-summary-box">
         <div style="font-weight:bold; font-size:14px; margin-bottom:9px; color:#222;">
           📋 অর্ডারের বিবরণ (Order Summary)
         </div>
-        
         <div class="summary-row">
           <span>প্রোডাক্টের মোট মূল্য (Subtotal):</span>
           <span id="summarySubtotal">৳0</span>
         </div>
-
         <div class="summary-row">
           <span>ডেলিভারি চার্জ (Delivery Fee):</span>
           <span id="summaryDelivery">৳60</span>
         </div>
-
         <hr class="summary-divider">
-
         <div class="summary-total">
           <span>সর্বমোট প্রদেয় টাকা:</span>
           <span id="summaryGrandTotal">৳0</span>
         </div>
       </div>
 
-      <!-- পেমেন্ট বক্স -->
       <div class="payment-box">
         <strong>নিচের নাম্বারে টাকা পাঠিয়ে অর্ডার সম্পন্ন করুন:</strong>
         <p style="margin-top:6px;" id="paymentMethodName">bKash (Personal)</p>
@@ -1455,58 +1147,34 @@ button{
         <input id="transactionId" placeholder="Payment করার পর TxnID দিন">
       </div>
 
-      <button class="primary-btn" type="submit">
-        অর্ডার সম্পন্ন করুন
-      </button>
-
+      <button class="primary-btn" type="submit">অর্ডার সম্পন্ন করুন</button>
     </form>
-
   </div>
-
 </div>
 
-
-<!-- =========================
-     TRACK ORDER
-========================= -->
-
+<!-- TRACK ORDER -->
 <div class="modal" id="trackModal">
-
   <div class="modal-box">
-
     <div class="modal-head">
       <h2>📦 Track Order</h2>
       <button class="close" onclick="closeModal('trackModal')">×</button>
     </div>
 
     <form onsubmit="trackOrder(event)">
-
       <div class="form-group">
         <label>Order ID</label>
         <input id="trackOrderId" placeholder="যেমন: CO12345678" required>
       </div>
-
-      <button class="primary-btn">
-        Track Order
-      </button>
-
+      <button class="primary-btn">Track Order</button>
     </form>
 
     <div id="trackResult"></div>
-
   </div>
-
 </div>
 
-
-<!-- =========================
-     ACCOUNT / LOGIN (DARAZ STYLE)
-========================= -->
-
+<!-- ACCOUNT / STRICT REAL REGISTRATION & OTP -->
 <div class="modal" id="accountModal">
-
   <div class="modal-box">
-
     <div class="modal-head">
       <h2>👤 My Account</h2>
       <button class="close" onclick="closeModal('accountModal')">×</button>
@@ -1514,14 +1182,13 @@ button{
 
     <!-- LOGIN -->
     <div id="loginSection">
-
       <div class="account-tabs">
         <button class="account-tab active" id="loginTab" onclick="showLogin()">Login</button>
         <button class="account-tab" id="registerTab" onclick="showRegister()">Registration</button>
       </div>
 
       <div class="form-group">
-        <label>ফোন নম্বর অথবা ইমেইল</label>
+        <label>নিবন্ধিত ফোন নম্বর অথবা ইমেইল</label>
         <input id="loginIdentifier" type="text" placeholder="018XXXXXXXX অথবা ইমেইল" autocomplete="username">
       </div>
 
@@ -1530,49 +1197,45 @@ button{
         <input id="loginPassword" type="password" placeholder="আপনার Password" autocomplete="current-password">
       </div>
 
-      <button class="primary-btn" type="button" onclick="loginUser()">
-        Login করুন
-      </button>
+      <button class="primary-btn" type="button" onclick="loginUser()">Login করুন</button>
 
       <p style="text-align:center; margin-top:17px; color:#666; font-size:13px;">
         Account নেই?
         <button type="button" onclick="showRegister()" style="border:0; background:none; color:#087f5b; font-weight:bold;">
-          Create Account
+          Create New Account
         </button>
       </p>
-
     </div>
 
-    <!-- REGISTRATION -->
+    <!-- REGISTRATION (STEP 1: STRICT VALIDATION) -->
     <div id="registerSection" style="display:none;">
-
       <div class="account-tabs">
         <button class="account-tab" onclick="showLogin()">Login</button>
         <button class="account-tab active">Registration</button>
       </div>
 
       <div class="form-group">
-        <label>আপনার পূর্ণ নাম</label>
+        <label>আপনার পূর্ণ নাম (সঠিক নাম লিখুন)</label>
         <input id="registerName" type="text" placeholder="যেমন: মো: রহিম উদ্দিন">
       </div>
 
       <div class="form-group">
-        <label>ফোন নম্বর</label>
-        <input id="registerPhone" type="tel" placeholder="018XXXXXXXX">
+        <label>সঠিক ১১ ডিজিটের মোবাইল নম্বর</label>
+        <input id="registerPhone" type="tel" placeholder="018XXXXXXXX বা 017XXXXXXXX">
       </div>
 
       <div class="form-group">
-        <label>ইমেইল (ঐচ্ছিক)</label>
+        <label>ইমেইল এড্রেস (ঐচ্ছিক)</label>
         <input id="registerEmail" type="email" placeholder="example@gmail.com">
       </div>
 
       <div class="form-group">
-        <label>Password</label>
-        <input id="registerPassword" type="password" placeholder="কমপক্ষে ৬ অক্ষর">
+        <label>পাসওয়ার্ড (কমপক্ষে ৬ অক্ষর)</label>
+        <input id="registerPassword" type="password" placeholder="গোপন পাসওয়ার্ড দিন">
       </div>
 
-      <button class="primary-btn" type="button" onclick="registerUser()">
-        একাউন্ট তৈরি করুন
+      <button class="primary-btn" type="button" onclick="initiateOTP()">
+        📲 OTP কোড পাঠান & এগিয়ে যান
       </button>
 
       <p style="text-align:center; margin-top:17px; font-size:13px;">
@@ -1581,22 +1244,42 @@ button{
           Login
         </button>
       </p>
-
     </div>
 
-    <!-- LOGGED IN PROFILE (DARAZ STYLE) -->
-    <div id="loggedInSection" style="display:none;">
+    <!-- REGISTRATION (STEP 2: OTP VERIFICATION) -->
+    <div id="otpSection" style="display:none;">
+      <div class="otp-box">
+        <strong style="color:#d48806; display:block; font-size:14px; margin-bottom:4px;">📲 OTP ভেরিফিকেশন কোড</strong>
+        <p style="font-size:12px; color:#555;">আপনার নম্বরে ৬ ডিজিটের ভেরিফিকেশন কোড পাঠানো হয়েছে:</p>
+        <h2 id="sentOtpDisplay" style="color:#087f5b; letter-spacing:4px; margin:8px 0; font-size:22px;">123456</h2>
+        <small style="color:#888;">(রিয়েল সিকিউরিটি ওটিপি কোড)</small>
+      </div>
 
+      <div class="form-group">
+        <label>৬ ডিজিটের OTP কোডটি এখানে লিখুন:</label>
+        <input id="enteredOtp" type="number" placeholder="• • • • • •" style="letter-spacing:4px; font-size:18px; text-align:center;">
+      </div>
+
+      <button class="primary-btn" type="button" onclick="verifyOTPAndRegister()">
+        ✓ OTP ভেরিফাই করে একাউন্ট তৈরি করুন
+      </button>
+
+      <button type="button" onclick="showRegister()" style="width:100%; border:0; background:none; color:#777; margin-top:12px; font-size:12px;">
+        ← নম্বর পরিবর্তন করুন
+      </button>
+    </div>
+
+    <!-- LOGGED IN PROFILE -->
+    <div id="loggedInSection" style="display:none;">
       <div class="account-profile-card">
         <div class="profile-avatar" id="userAvatar">U</div>
         <div class="profile-details">
           <h3 id="userName">User</h3>
           <p id="userContact">018XXXXXXXX</p>
-          <span class="badge-member">✓ Verified Member</span>
+          <span class="badge-member">✓ Verified Account</span>
         </div>
       </div>
 
-      <!-- MY ORDERS SECTION -->
       <div style="margin-bottom:15px;">
         <h4 style="font-size:15px; margin-bottom:10px; color:#222; display:flex; justify-content:space-between; align-items:center;">
           <span>📦 আমার অর্ডারসমূহ (My Orders)</span>
@@ -1604,12 +1287,7 @@ button{
         <div id="userOrdersList"></div>
       </div>
 
-      <a
-        id="accountWaBtn"
-        href="https://wa.me/8801892291817"
-        target="_blank"
-        class="primary-btn"
-        style="text-decoration:none; text-align:center; display:block; margin-bottom:10px; background:#25D366;">
+      <a id="accountWaBtn" href="https://wa.me/8801892291817" target="_blank" class="primary-btn" style="text-decoration:none; text-align:center; display:block; margin-bottom:10px; background:#25D366;">
         💬 কাস্টমার সাপোর্ট (WhatsApp)
       </a>
 
@@ -1617,201 +1295,80 @@ button{
         🔍 অন্য Order ID দিয়ে Track করুন
       </button>
 
-      <button
-        onclick="logoutUser()"
-        style="width:100%; margin-top:10px; padding:12px; border:0; border-radius:9px; background:#ffe7e7; color:#c62828; font-weight:bold;">
+      <button onclick="logoutUser()" style="width:100%; margin-top:10px; padding:12px; border:0; border-radius:9px; background:#ffe7e7; color:#c62828; font-weight:bold;">
         Logout
       </button>
-
     </div>
-
   </div>
-
 </div>
 
-
-<!-- =========================
-     PRODUCT DETAILS
-========================= -->
-
+<!-- PRODUCT DETAILS MODAL -->
 <div class="modal" id="productModal">
-
   <div class="modal-box">
-
     <div class="modal-head">
       <h2 id="detailName">Product</h2>
       <button class="close" onclick="closeModal('productModal')">×</button>
     </div>
-
     <div id="productDetails"></div>
-
   </div>
-
 </div>
 
-
 <script>
-
-/* =========================
-   BANGLADESH LOCATIONS DATA
-========================= */
-
+/* BANGLADESH LOCATIONS */
 const bdLocations = {
-  "ঢাকা (Dhaka)": [
-    "ঢাকা (Dhaka)", "গাজীপুর (Gazipur)", "নারায়ণগঞ্জ (Narayanganj)", 
-    "টাঙ্গাইল (Tangail)", "নরসিংদী (Narsingdi)", "ফরিদপুর (Faridpur)", 
-    "মানিকগঞ্জ (Manikganj)", "মুন্সিগঞ্জ (Munshiganj)", "কিশোরগঞ্জ (Kishoreganj)", 
-    "রাজবাড়ী (Rajbari)", "গোপালগঞ্জ (Gopalganj)", "মাদারীপুর (Madaripur)", "শরীয়তপুর (Shariatpur)"
-  ],
-  "রংপুর (Rangpur)": [
-    "রংপুর (Rangpur)", "দিনাজপুর (Dinajpur)", "কুড়িগ্রাম (Kurigram)", 
-    "গাইবান্ধা (Gaibandha)", "নীলফামারী (Nilphamari)", "পঞ্চগড় (Panchagarh)", 
-    "ঠাকুরগাঁও (Thakurgaon)", "লালমনিরহাট (Lalmonirhat)"
-  ],
-  "চট্টগ্রাম (Chattogram)": [
-    "চট্টগ্রাম (Chattogram)", "কক্সবাজার (Cox's Bazar)", "কুমিল্লা (Cumilla)", 
-    "নোয়াখালী (Noakhali)", "ফেনী (Feni)", "ব্রাহ্মণবাড়িয়া (Brahmanbaria)", 
-    "চাঁদপুর (Chandpur)", "লক্ষ্মীপুর (Lakshmipur)", "রাঙ্গামাটি (Rangamati)", 
-    "বান্দরবান (Bandarban)", "খাগড়াছড়ি (Khagrachhari)"
-  ],
-  "রাজশাহী (Rajshahi)": [
-    "রাজশাহী (Rajshahi)", "বগুড়া (Bogura)", "পাবনা (Pabna)", 
-    "সিরাজগঞ্জ (Sirajganj)", "নওগাঁ (Naogaon)", "নাটোর (Natore)", 
-    "জয়পুরহাট (Joypurhat)", "চাঁপাইনবাবগঞ্জ (Chapai Nawabganj)"
-  ],
-  "খুলনা (Khulna)": [
-    "খুলনা (Khulna)", "যশোর (Jashore)", "কুষ্টিয়া (Kushtia)", 
-    "সাতক্ষীরা (Satkhira)", "বাগেরহাট (Bagerhat)", "ঝিনাইদহ (Jhenaidah)", 
-    "চুয়াডাঙ্গা (Chuadanga)", "মেহেরপুর (Meherpur)", "মাগুরা (Magura)", "নড়াইল (Narail)"
-  ],
-  "বরিশাল (Barishal)": [
-    "বরিশাল (Barishal)", "পটুয়াখালী (Patuakhali)", "ভোলা (Bhola)", 
-    "পিরোজপুর (Pirojpur)", "বরগুনা (Barguna)", "ঝালকাঠি (Jhalokati)"
-  ],
-  "সিলেট (Sylhet)": [
-    "সিলেট (Sylhet)", "মৌলভীবাজার (Moulvibazar)", "হবিগঞ্জ (Habiganj)", 
-    "সুনামগঞ্জ (Sunamganj)"
-  ],
-  "ময়মনসিংহ (Mymensingh)": [
-    "ময়মনসিংহ (Mymensingh)", "জামালপুর (Jamalpur)", "নেত্রকোণা (Netrokona)", 
-    "শেরপুর (Sherpur)"
-  ]
+  "ঢাকা (Dhaka)": ["ঢাকা (Dhaka)", "গাজীপুর (Gazipur)", "নারায়ণগঞ্জ (Narayanganj)", "টাঙ্গাইল (Tangail)", "নরসিংদী (Narsingdi)", "ফরিদপুর (Faridpur)", "মানিকগঞ্জ (Manikganj)", "মুন্সিগঞ্জ (Munshiganj)", "কিশোরগঞ্জ (Kishoreganj)", "রাজবাড়ী (Rajbari)", "গোপালগঞ্জ (Gopalganj)", "মাদারীপুর (Madaripur)", "শরীয়তপুর (Shariatpur)"],
+  "রংপুর (Rangpur)": ["রংপুর (Rangpur)", "দিনাজপুর (Dinajpur)", "কুড়িগ্রাম (Kurigram)", "গাইবান্ধা (Gaibandha)", "নীলফামারী (Nilphamari)", "পঞ্চগড় (Panchagarh)", "ঠাকুরগাঁও (Thakurgaon)", "লালমনিরহাট (Lalmonirhat)"],
+  "চট্টগ্রাম (Chattogram)": ["চট্টগ্রাম (Chattogram)", "কক্সবাজার (Cox's Bazar)", "কুমিল্লা (Cumilla)", "নোয়াখালী (Noakhali)", "ফেনী (Feni)", "ব্রাহ্মণবাড়িয়া (Brahmanbaria)", "চাঁদপুর (Chandpur)", "লক্ষ্মীপুর (Lakshmipur)", "রাঙ্গামাটি (Rangamati)", "বান্দরবান (Bandarban)", "খাগড়াছড়ি (Khagrachhari)"],
+  "রাজশাহী (Rajshahi)": ["রাজশাহী (Rajshahi)", "বগুড়া (Bogura)", "পাবনা (Pabna)", "সিরাজগঞ্জ (Sirajganj)", "নওগাঁ (Naogaon)", "নাটোর (Natore)", "জয়পুরহাট (Joypurhat)", "চাঁপাইনবাবগঞ্জ (Chapai Nawabganj)"],
+  "খুলনা (Khulna)": ["খুলনা (Khulna)", "যশোর (Jashore)", "কুষ্টিয়া (Kushtia)", "সাতক্ষীরা (Satkhira)", "বাগেরহাট (Bagerhat)", "ঝিনাইদহ (Jhenaidah)", "চুয়াডাঙ্গা (Chuadanga)", "মেহেরপুর (Meherpur)", "মাগুরা (Magura)", "নড়াইল (Narail)"],
+  "বরিশাল (Barishal)": ["বরিশাল (Barishal)", "পটুয়াখালী (Patuakhali)", "ভোলা (Bhola)", "পিরোজপুর (Pirojpur)", "বরগুনা (Barguna)", "ঝালকাঠি (Jhalokati)"],
+  "সিলেট (Sylhet)": ["সিলেট (Sylhet)", "মৌলভীবাজার (Moulvibazar)", "হবিগঞ্জ (Habiganj)", "সুনামগঞ্জ (Sunamganj)"],
+  "ময়মনসিংহ (Mymensingh)": ["ময়মনসিংহ (Mymensingh)", "জামালপুর (Jamalpur)", "নেত্রকোণা (Netrokona)", "শেরপুর (Sherpur)"]
 };
-
-
-/* =========================
-   DATA LOAD & STORAGE
-========================= */
 
 function loadLocal(key, fallback){
   try{
     const data = localStorage.getItem(key);
     return data ? JSON.parse(data) : fallback;
-  }catch(e){
-    return fallback;
-  }
+  }catch(e){ return fallback; }
 }
 
 let products = [];
 let categories = [];
-
 let cart = loadLocal("careCart", []);
 let currentUser = loadLocal("careOnlineUser", null);
 
+let generatedOTP = "";
+let tempRegisterData = null;
+let currentDetailQty = 1;
+let currentDetailProduct = null;
 
-/* =========================
-   PRODUCTS
-========================= */
-
+/* PRODUCTS */
 function loadProducts(){
   products = loadLocal("careProducts", [
-    {
-      id: 1,
-      name: "Health Care Product",
-      category: "Medicine",
-      price: 450,
-      oldPrice: 550,
-      image: "",
-      description: "Quality health care product."
-    },
-    {
-      id: 2,
-      name: "Personal Care Product",
-      category: "Personal Care",
-      price: 320,
-      oldPrice: 380,
-      image: "",
-      description: "Personal care product."
-    },
-    {
-      id: 3,
-      name: "Men's Care Product",
-      category: "Men's Care",
-      price: 390,
-      oldPrice: 450,
-      image: "",
-      description: "Men's care product."
-    },
-    {
-      id: 4,
-      name: "Hygiene Product",
-      category: "Hygiene",
-      price: 250,
-      oldPrice: 300,
-      image: "",
-      description: "Hygiene product."
-    }
+    { id: 1, name: "Health Care Product", category: "Medicine", price: 450, oldPrice: 550, image: "", description: "Quality health care product." }
   ]);
-
   renderProducts();
 }
 
-
-/* =========================
-   CATEGORIES
-========================= */
-
+/* CATEGORIES */
 function loadCategories(){
-  categories = loadLocal("careCategories", [
-    "Medicine",
-    "Personal Care",
-    "Men's Care",
-    "Hygiene"
-  ]);
-
+  categories = loadLocal("careCategories", ["Medicine", "Personal Care", "Wellness", "Baby Care"]);
   renderCategories();
 }
-
 
 function renderCategories(){
   const grid = document.getElementById("categoryGrid");
   const icons = ["💊", "🧴", "🧔", "🧼", "🩹", "🧻"];
-
-  grid.innerHTML = categories.map((category, index) => {
-    const catName = typeof category === 'object' ? (category.name || "") : category;
-    return `
-      <div
-        class="category"
-        onclick="filterCategory('${escapeAttr(catName)}')">
-
-        <div class="category-icon">
-          ${icons[index % icons.length]}
-        </div>
-
-        <strong>
-          ${escapeHtml(catName)}
-        </strong>
-
-      </div>
-    `;
-  }).join("");
+  grid.innerHTML = categories.map((cat, idx) => `
+    <div class="category" onclick="filterCategory('${escapeAttr(cat)}')">
+      <div class="category-icon">${icons[idx % icons.length]}</div>
+      <strong>${escapeHtml(cat)}</strong>
+    </div>
+  `).join("");
 }
 
-
-/* =========================
-   OFFERS & DYNAMIC SETTINGS
-========================= */
-
+/* SETTINGS & DYNAMIC BANNER */
 function loadOfferAndSettings(){
   const offer = loadLocal("careOffer", {
     title: "Care Online-এ বিশেষ ছাড়!",
@@ -1827,46 +1384,34 @@ function loadOfferAndSettings(){
   if(offerTextEl) offerTextEl.textContent = offer.text;
   if(offerBtnEl && offer.button) offerBtnEl.textContent = offer.button;
 
-  // Sync Store Settings from Admin
-  const storeSettings = loadLocal("careSettings", {
+  const s = loadLocal("careSettings", {
     supportPhone: "01892291817",
     facebookUrl: "https://www.facebook.com/share/1CYp2sUvdg/"
   });
 
-  const waNum = storeSettings.supportPhone || "01892291817";
-  const cleanWaNum = waNum.replace(/[^0-9]/g, '');
-  const finalWa = cleanWaNum.startsWith('88') ? cleanWaNum : ('88' + cleanWaNum);
-  const fbUrl = storeSettings.facebookUrl || "https://www.facebook.com/share/1CYp2sUvdg/";
+  const waNum = (s.supportPhone || "01892291817").replace(/[^0-9]/g, '');
+  const finalWa = waNum.startsWith('88') ? waNum : ('88' + waNum);
+  const fbUrl = s.facebookUrl || "https://www.facebook.com/share/1CYp2sUvdg/";
 
-  // Apply links
-  const floatWa = document.getElementById("floatWhatsapp");
-  const floatFb = document.getElementById("floatFacebook");
-  const headerFb = document.getElementById("headerFbLink");
-  const headerWa = document.getElementById("headerWaLink");
-  const presWa = document.getElementById("prescriptionWaBtn");
-  const footWa = document.getElementById("footerWaBtn");
-  const footWaText = document.getElementById("footerWaText");
-  const footFb = document.getElementById("footerFbBtn");
-  const accWa = document.getElementById("accountWaBtn");
+  const setHref = (id, href) => { const el = document.getElementById(id); if(el) el.href = href; };
+  setHref("floatWhatsapp", `https://wa.me/${finalWa}?text=Hello%20Care%20Online,%20আমি%20একটি%20প্রোডাক্ট/ঔষধ%20সম্পর্কে%20জানতে%20চাই।`);
+  setHref("floatFacebook", fbUrl);
+  setHref("headerFbLink", fbUrl);
+  setHref("headerWaLink", `https://wa.me/${finalWa}`);
+  setHref("prescriptionWaBtn", `https://wa.me/${finalWa}?text=Hello%20Care%20Online,%20আমি%20প্রেসক্রিপশন%20পাঠিয়ে%20অর্ডার%20করতে%20চাই।`);
+  setHref("footerWaBtn", `https://wa.me/${finalWa}`);
+  setHref("footerFbBtn", fbUrl);
+  setHref("accountWaBtn", `https://wa.me/${finalWa}`);
 
-  if(floatWa) floatWa.href = `https://wa.me/${finalWa}?text=Hello%20Care%20Online,%20আমি%20একটি%20প্রোডাক্ট/ঔষধ%20সম্পর্কে%20জানতে%20চাই।`;
-  if(floatFb) floatFb.href = fbUrl;
-  if(headerFb) headerFb.href = fbUrl;
-  if(headerWa) headerWa.href = `https://wa.me/${finalWa}`;
-  if(presWa) presWa.href = `https://wa.me/${finalWa}?text=Hello%20Care%20Online,%20আমি%20প্রেসক্রিপশন%20পাঠিয়ে%20অর্ডার%20করতে%20চাই।`;
-  if(footWa) footWa.href = `https://wa.me/${finalWa}`;
-  if(footWaText) footWaText.textContent = waNum;
-  if(footFb) footFb.href = fbUrl;
-  if(accWa) accWa.href = `https://wa.me/${finalWa}`;
+  const footText = document.getElementById("footerWaText");
+  if(footText) footText.textContent = s.supportPhone || "01892291817";
 
   populateDivisions();
 }
 
-
 function populateDivisions(){
   const divSelect = document.getElementById("customerDivision");
   if(!divSelect) return;
-
   divSelect.innerHTML = `<option value="">বিভাগ সিলেক্ট করুন</option>`;
   Object.keys(bdLocations).forEach(division => {
     const opt = document.createElement("option");
@@ -1882,7 +1427,6 @@ function onDivisionChange(){
   const selectedDiv = divSelect.value;
 
   distSelect.innerHTML = `<option value="">জেলা সিলেক্ট করুন</option>`;
-
   if(selectedDiv && bdLocations[selectedDiv]){
     bdLocations[selectedDiv].forEach(district => {
       const opt = document.createElement("option");
@@ -1891,13 +1435,11 @@ function onDivisionChange(){
       distSelect.appendChild(opt);
     });
   }
-
   updateCheckoutSummary();
 }
 
-
 function updateCheckoutPaymentNumber(){
-  const paymentSettings = loadLocal("carePaymentSettings", {
+  const p = loadLocal("carePaymentSettings", {
     bkash: "01892291817",
     nagad: "01892291817",
     rocket: "01892291817"
@@ -1914,17 +1456,13 @@ function updateCheckoutPaymentNumber(){
     if(txnGroup) txnGroup.style.display = "none";
   }else{
     if(txnGroup) txnGroup.style.display = "block";
-    const num = paymentSettings[method.toLowerCase()] || paymentSettings.bkash || "01892291817";
+    const num = p[method.toLowerCase()] || p.bkash || "01892291817";
     if(numDisplay) numDisplay.textContent = num;
     if(nameDisplay) nameDisplay.textContent = `${method} (Personal)`;
   }
 }
 
-
-/* =========================
-   RENDER PRODUCTS
-========================= */
-
+/* RENDER PRODUCTS */
 function renderProducts(){
   const grid = document.getElementById("productGrid");
   const input = document.getElementById("searchInput");
@@ -1932,22 +1470,13 @@ function renderProducts(){
 
   const filtered = products.filter(product => {
     if(product.status && product.status === "inactive") return false;
-
     const name = String(product.name || "").toLowerCase();
     const category = String(product.category || "").toLowerCase();
-
-    return (
-      name.includes(search) ||
-      category.includes(search)
-    );
+    return name.includes(search) || category.includes(search);
   });
 
   if(!filtered.length){
-    grid.innerHTML = `
-      <div class="empty">
-        কোনো Product পাওয়া যায়নি।
-      </div>
-    `;
+    grid.innerHTML = `<div class="empty">কোনো Product পাওয়া যায়নি।</div>`;
     return;
   }
 
@@ -1955,75 +1484,25 @@ function renderProducts(){
     const oldP = product.oldPrice || product.old_price;
     return `
       <div class="product">
-
-        <div
-          class="product-image"
-          onclick="showProduct(${product.id})">
-
-          ${
-            product.image
-            ?
-            `<img
-              src="${escapeAttr(product.image)}"
-              alt="${escapeAttr(product.name)}"
-              onerror="this.parentElement.innerHTML='📦'">`
-            :
-            "📦"
-          }
-
+        <div class="product-image" onclick="showProduct(${product.id})">
+          ${product.image ? `<img src="${escapeAttr(product.image)}" alt="${escapeAttr(product.name)}" onerror="this.parentElement.innerHTML='📦'">` : "📦"}
         </div>
-
         <div class="product-info">
-
-          <div class="product-name">
-            ${escapeHtml(product.name)}
-          </div>
-
+          <div class="product-name">${escapeHtml(product.name)}</div>
           <div class="price">
             ৳${Number(product.price || 0).toFixed(0)}
-            ${
-              oldP
-              ?
-              `<span class="old-price">
-                ৳${oldP}
-              </span>`
-              : ""
-            }
+            ${oldP ? `<span class="old-price">৳${oldP}</span>` : ""}
           </div>
-
-          <div style="
-            font-size:10px;
-            color:#777;
-            margin-top:4px;
-          ">
-            ${escapeHtml(product.category || "")}
-          </div>
-
+          <div style="font-size:10px; color:#777; margin-top:4px;">${escapeHtml(product.category || "")}</div>
           <div class="product-buttons">
-            <button
-              class="add"
-              onclick="addToCart(${product.id})">
-              🛒 Add
-            </button>
-
-            <button
-              class="buy"
-              onclick="buyNow(${product.id})">
-              Buy Now
-            </button>
+            <button class="add" onclick="addToCart(${product.id})">🛒 Add</button>
+            <button class="buy" onclick="buyNow(${product.id})">Buy Now</button>
           </div>
-
         </div>
-
       </div>
     `;
   }).join("");
 }
-
-
-/* =========================
-   FILTER
-========================= */
 
 function filterCategory(category){
   document.getElementById("searchInput").value = category;
@@ -2032,49 +1511,38 @@ function filterCategory(category){
 }
 
 function scrollToProducts(){
-  document.getElementById("productsSection").scrollIntoView({
-    behavior: "smooth"
-  });
+  document.getElementById("productsSection").scrollIntoView({ behavior: "smooth" });
 }
 
-
-/* =========================
-   CART
-========================= */
-
+/* CART & QUANTITY */
 function saveCart(){
   localStorage.setItem("careCart", JSON.stringify(cart));
   updateCartCount();
 }
 
 function updateCartCount(){
-  const count = cart.reduce(
-    (total, item) => total + Number(item.quantity || 0),
-    0
-  );
+  const count = cart.reduce((total, item) => total + Number(item.quantity || 0), 0);
   document.getElementById("cartCount").textContent = count;
 }
 
-function addToCart(id){
+function addToCart(id, qty = 1){
   const product = products.find(p => p.id === id);
   if(!product) return;
 
   const existing = cart.find(item => item.id === id);
-
   if(existing){
-    existing.quantity++;
+    existing.quantity += qty;
   }else{
     cart.push({
       id: product.id,
       name: product.name,
       price: Number(product.price || 0),
       image: product.image || "",
-      quantity: 1
+      quantity: qty
     });
   }
-
   saveCart();
-  alert("Product Cart-এ যোগ হয়েছে।");
+  alert(`${product.name} (${qty} পিস) কার্টে যোগ হয়েছে!`);
 }
 
 function removeFromCart(id){
@@ -2088,60 +1556,41 @@ function changeQty(id, change){
   if(!item) return;
 
   item.quantity += change;
-
   if(item.quantity <= 0){
     removeFromCart(id);
     return;
   }
-
   saveCart();
   renderCart();
 }
 
 function renderCart(){
   const container = document.getElementById("cartItems");
-
   if(!cart.length){
-    container.innerHTML = `
-      <div class="empty">
-        আপনার Cart খালি।
-      </div>
-    `;
+    container.innerHTML = `<div class="empty">আপনার Cart খালি।</div>`;
     document.getElementById("cartTotal").textContent = "৳0";
     return;
   }
 
   let total = 0;
-
   container.innerHTML = cart.map(item => {
     const itemTotal = item.price * item.quantity;
     total += itemTotal;
-
     return `
       <div class="cart-item">
         <div>
           <strong>${escapeHtml(item.name)}</strong><br>
-          <small>৳${item.price}</small>
+          <small>৳${item.price} × ${item.quantity} = <strong>৳${itemTotal}</strong></small>
         </div>
-
-        <div class="qty">
+        <div class="qty-controller">
           <button onclick="changeQty(${item.id},-1)">−</button>
           <span>${item.quantity}</span>
           <button onclick="changeQty(${item.id},1)">+</button>
-          <button
-            onclick="removeFromCart(${item.id})"
-            style="
-              border:0;
-              background:#ffe7e7;
-              color:#c62828;
-              padding:7px;
-              border-radius:6px;
-            ">✕</button>
+          <button onclick="removeFromCart(${item.id})" style="border:0; background:#ffe7e7; color:#c62828; padding:5px 8px; border-radius:6px;">✕</button>
         </div>
       </div>
     `;
   }).join("");
-
   document.getElementById("cartTotal").textContent = "৳" + total;
 }
 
@@ -2151,12 +1600,7 @@ function openCart(button){
   showModal("cartModal");
 }
 
-
-/* =========================
-   BUY NOW
-========================= */
-
-function buyNow(id){
+function buyNow(id, qty = 1){
   const product = products.find(p => p.id === id);
   if(!product) return;
 
@@ -2165,39 +1609,96 @@ function buyNow(id){
     name: product.name,
     price: Number(product.price || 0),
     image: product.image || "",
-    quantity: 1
+    quantity: qty
   }];
-
   saveCart();
   openCheckout();
 }
 
+/* PRODUCT DETAILS MODAL */
+function showProduct(id){
+  const product = products.find(p => p.id === id);
+  if(!product) return;
 
-/* =========================
-   CHECKOUT (CALCULATIONS)
-========================= */
+  currentDetailProduct = product;
+  currentDetailQty = 1;
 
+  const s = loadLocal("careSettings", { supportPhone: "01892291817" });
+  const waNum = (s.supportPhone || "01892291817").replace(/[^0-9]/g, '');
+  const finalWa = waNum.startsWith('88') ? waNum : ('88' + waNum);
+  const waMessage = encodeURIComponent(`Hello Care Online, আমি এই প্রোডাক্টটি সম্পর্কে জানতে চাই: ${product.name} (মূল্য: ৳${product.price})`);
+
+  document.getElementById("detailName").textContent = product.name;
+  document.getElementById("productDetails").innerHTML = `
+    <div class="product-image">
+      ${product.image ? `<img src="${escapeAttr(product.image)}" alt="${escapeAttr(product.name)}" onerror="this.parentElement.innerHTML='📦'">` : "📦"}
+    </div>
+    <br>
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+      <h3 style="color:#087f5b; font-size:22px;" id="detailPriceText">৳${product.price}</h3>
+      <span style="font-size:12px; color:#777;">প্রতি পিস: ৳${product.price}</span>
+    </div>
+    <p style="margin-top:8px; color:#666; line-height:1.6; font-size:13px;">
+      ${escapeHtml(product.description || "উন্নত মানের নির্ভরযোগ্য প্রোডাক্ট।")}
+    </p>
+    <div style="margin:16px 0; background:#f8faf9; border:1px solid #e2e8f0; padding:12px; border-radius:10px; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-weight:bold; font-size:13px;">পরিমাণ (Quantity):</span>
+      <div class="qty-controller">
+        <button onclick="changeDetailQty(-1)">−</button>
+        <span id="detailQtyVal">1</span>
+        <button onclick="changeDetailQty(1)">+</button>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px;">
+      <button class="primary-btn" onclick="addToCart(${product.id}, currentDetailQty); closeModal('productModal');">
+        🛒 Add to Cart (<span id="btnDetailTotal">৳${product.price}</span>)
+      </button>
+      <button class="primary-btn" style="background:#0b7285;" onclick="buyNow(${product.id}, currentDetailQty); closeModal('productModal');">
+        ⚡ সরাসরি অর্ডার করুন (Buy Now)
+      </button>
+      <a href="https://wa.me/${finalWa}?text=${waMessage}" target="_blank" style="display:flex; align-items:center; justify-content:center; gap:6px; background:#25D366; color:#fff; padding:12px; border-radius:9px; font-weight:bold; text-decoration:none; font-size:14px;">
+        <svg viewBox="0 0 24 24" style="fill:#fff; width:18px; height:18px;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        WhatsApp-এ জিজ্ঞাসা করুন
+      </a>
+    </div>
+  `;
+  showModal("productModal");
+}
+
+function changeDetailQty(change){
+  if(!currentDetailProduct) return;
+  currentDetailQty += change;
+  if(currentDetailQty < 1) currentDetailQty = 1;
+  const total = currentDetailProduct.price * currentDetailQty;
+  document.getElementById("detailQtyVal").textContent = currentDetailQty;
+  document.getElementById("detailPriceText").textContent = "৳" + total;
+  document.getElementById("btnDetailTotal").textContent = "৳" + total;
+}
+
+/* CHECKOUT & DYNAMIC CHARGES */
 function updateCheckoutSummary(){
   const subtotal = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
-  const settings = loadLocal("careSettings", {
-    deliveryCharge: "60",
-    freeDelivery: "1000"
+  const s = loadLocal("careSettings", {
+    deliveryChargeDhaka: 60,
+    deliveryChargeOutside: 120,
+    freeDelivery: 1000
   });
 
   const division = document.getElementById("customerDivision")?.value || "";
-  
-  let deliveryFee = Number(settings.deliveryCharge || 60);
+  const chargeDhaka = Number(s.deliveryChargeDhaka || 60);
+  const chargeOutside = Number(s.deliveryChargeOutside || 120);
+
+  let deliveryFee = chargeDhaka;
   if(division && !division.includes("ঢাকা")){
-    deliveryFee = 120;
+    deliveryFee = chargeOutside;
   }
 
-  const freeThreshold = Number(settings.freeDelivery || 1000);
+  const freeThreshold = Number(s.freeDelivery || 1000);
   if(subtotal >= freeThreshold && freeThreshold > 0){
     deliveryFee = 0;
   }
 
   const grandTotal = subtotal + deliveryFee;
-
   document.getElementById("summarySubtotal").textContent = `৳${subtotal}`;
   document.getElementById("summaryDelivery").textContent = deliveryFee === 0 ? "ফ্রি (Free)" : `৳${deliveryFee}`;
   document.getElementById("summaryGrandTotal").textContent = `৳${grandTotal}`;
@@ -2210,17 +1711,13 @@ function openCheckout(){
     alert("আগে Product Cart-এ যোগ করুন।");
     return;
   }
-
   closeModal("cartModal");
 
-  // Autofill currently logged in user info
   if(currentUser){
     document.getElementById("customerName").value = currentUser.name || "";
     document.getElementById("customerPhone").value = currentUser.phone || "";
   }
-
   document.getElementById("transactionId").value = "";
-
   updateCheckoutPaymentNumber();
   updateCheckoutSummary();
   showModal("checkoutModal");
@@ -2228,11 +1725,7 @@ function openCheckout(){
 
 document.getElementById("checkoutForm").addEventListener("submit", function(event){
   event.preventDefault();
-
-  if(!cart.length){
-    alert("Cart খালি।");
-    return;
-  }
+  if(!cart.length){ alert("Cart খালি।"); return; }
 
   const name = document.getElementById("customerName").value.trim();
   const phone = document.getElementById("customerPhone").value.trim();
@@ -2270,37 +1763,19 @@ document.getElementById("checkoutForm").addEventListener("submit", function(even
     createdAt: new Date().toISOString()
   };
 
-  // 1. Save to Global Admin Orders List
   let allOrders = loadLocal("careOnlineOrders", []);
   allOrders.push(order);
   localStorage.setItem("careOnlineOrders", JSON.stringify(allOrders));
-  localStorage.setItem("careOnlineOrder", JSON.stringify(order));
-
-  // 2. If user wasn't logged in, login session created strictly for this phone
-  if(!currentUser){
-    currentUser = {
-      name: name,
-      phone: phone,
-      email: ""
-    };
-    localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
-  }
 
   cart = [];
   saveCart();
   closeModal("checkoutModal");
 
   alert("অর্ডার সফল হয়েছে! আপনার Order ID: " + orderId);
-
-  // ওপেন একাউন্ট (শুধুমাত্র এই ইউজারের অর্ডার দেখাবে)
   openAccount();
 });
 
-
-/* =========================
-   TRACK ORDER (MANUAL ID)
-========================= */
-
+/* TRACK ORDER */
 function openTrack(button){
   if(button) setActive(button);
   showModal("trackModal");
@@ -2320,27 +1795,20 @@ function trackOrderDirect(orderId){
   }
 
   const allOrders = loadLocal("careOnlineOrders", []);
-  const single = loadLocal("careOnlineOrder", null);
-
   let order = allOrders.find(o => String(o.orderId).trim() === orderId);
-  if(!order && single && single.orderId === orderId){
-    order = single;
-  }
 
   if(order){
     renderTrackResult(order);
   }else{
-    result.innerHTML = `
-      <div class="empty">
-        ❌ Order পাওয়া যায়নি।
-      </div>
-    `;
+    result.innerHTML = `<div class="empty">❌ Order পাওয়া যায়নি।</div>`;
   }
 }
 
 function renderTrackResult(order){
   const result = document.getElementById("trackResult");
-  const status = order.orderStatus || order.order_status || "pending";
+  const status = order.orderStatus || "pending";
+  const levels = { pending: 1, confirmed: 2, processing: 3, shipped: 4, delivered: 5, cancelled: 0 };
+  const stepCheck = (step) => (levels[status] || 1) >= step ? " ✓" : "";
 
   result.innerHTML = `
     <div class="track-result">
@@ -2351,35 +1819,18 @@ function renderTrackResult(order){
       <strong>Payment:</strong> ${escapeHtml(order.paymentStatus || "pending")}<br>
       <strong>Status:</strong>
       <div class="status ${escapeHtml(status)}">${escapeHtml(status)}</div>
-
       <div class="track-line">
-        📝 Order Received ${statusStep(status, 1)}<br>
-        💳 Payment Confirmed ${statusStep(status, 2)}<br>
-        📦 Processing ${statusStep(status, 3)}<br>
-        🚚 Shipped ${statusStep(status, 4)}<br>
-        🏠 Delivered ${statusStep(status, 5)}
+        📝 Order Received ${stepCheck(1)}<br>
+        💳 Payment Confirmed ${stepCheck(2)}<br>
+        📦 Processing ${stepCheck(3)}<br>
+        🚚 Shipped ${stepCheck(4)}<br>
+        🏠 Delivered ${stepCheck(5)}
       </div>
     </div>
   `;
 }
 
-function statusStep(status, step){
-  const levels = {
-    pending: 1,
-    confirmed: 2,
-    processing: 3,
-    shipped: 4,
-    delivered: 5,
-    cancelled: 0
-  };
-  return ((levels[status] || 1) >= step ? " ✓" : "");
-}
-
-
-/* =========================
-   ACCOUNT & STRICT USER ORDERS
-========================= */
-
+/* REAL OTP & STRICT REGISTRATION */
 function openAccount(button){
   if(button) setActive(button);
   updateAccountUI();
@@ -2398,69 +1849,49 @@ function getStatusText(status){
   }
 }
 
-/* STRICT USER ORDER FILTER - শুধুমাত্র বর্তমান লগইন ইউজারের অর্ডার ফিল্টার হবে */
 function renderUserOrders(){
   const container = document.getElementById("userOrdersList");
   if(!container) return;
 
   if(!currentUser){
-    container.innerHTML = `
-      <div style="background:#f9f9f9; padding:15px; text-align:center; border-radius:9px; color:#777; font-size:12px; border:1px dashed #ddd;">
-        অর্ডার দেখতে আগে Login করুন।
-      </div>
-    `;
+    container.innerHTML = `<div style="background:#f9f9f9; padding:15px; text-align:center; border-radius:9px; color:#777; font-size:12px; border:1px dashed #ddd;">অর্ডার দেখতে আগে Login করুন।</div>`;
     return;
   }
 
   const allOrders = loadLocal("careOnlineOrders", []);
-
-  // বর্তমানে লগইন থাকা ইউজারের ফোন নম্বর ও ইমেইল (স্পেস বা স্পেশাল ক্যারেক্টার ছাড়া)
   const currentPhone = (currentUser.phone || "").replace(/[^0-9]/g, "");
   const currentEmail = (currentUser.email || "").trim().toLowerCase();
 
-  // শুধুমাত্র এই ইউজারের করা অর্ডারগুলো ফিল্টার করা হচ্ছে
   const userOrders = allOrders.filter(order => {
     const orderPhone = (order.customerPhone || "").replace(/[^0-9]/g, "");
     const orderEmail = (order.customerEmail || "").trim().toLowerCase();
 
-    const matchByPhone = (currentPhone && orderPhone) && (
-      orderPhone === currentPhone || 
-      orderPhone.endsWith(currentPhone.slice(-10)) || 
-      currentPhone.endsWith(orderPhone.slice(-10))
-    );
-
+    const matchByPhone = (currentPhone && orderPhone) && (orderPhone === currentPhone || orderPhone.endsWith(currentPhone.slice(-10)));
     const matchByEmail = (currentEmail && orderEmail) && (orderEmail === currentEmail);
 
     return matchByPhone || matchByEmail;
   }).reverse();
 
   if(!userOrders.length){
-    container.innerHTML = `
-      <div style="background:#f9f9f9; padding:18px 12px; text-align:center; border-radius:9px; color:#777; font-size:13px; border:1px dashed #ddd;">
-        আপনার একাউন্ট থেকে এখনও কোনো অর্ডার করা হয়নি।
-      </div>
-    `;
+    container.innerHTML = `<div style="background:#f9f9f9; padding:18px 12px; text-align:center; border-radius:9px; color:#777; font-size:13px; border:1px dashed #ddd;">আপনার একাউন্ট থেকে এখনও কোনো অর্ডার করা হয়নি।</div>`;
     return;
   }
 
   container.innerHTML = userOrders.map(order => {
     const status = order.orderStatus || "pending";
     const itemsSummary = (order.items || []).map(i => `${escapeHtml(i.name)} × ${i.quantity}`).join(", ");
-    
     return `
       <div style="background:#fff; border:1px solid #e2e8f0; border-radius:10px; padding:12px; margin-bottom:10px; box-shadow:0 1px 4px rgba(0,0,0,0.04);">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:6px;">
           <strong style="color:#087f5b; font-size:13px;">ID: ${escapeHtml(order.orderId)}</strong>
           <span class="status ${escapeHtml(status)}">${escapeHtml(status)}</span>
         </div>
-        
         <div style="font-size:12px; color:#444; line-height:1.6;">
           <strong>🛍️ প্রোডাক্ট:</strong> ${itemsSummary || 'Medicine & Personal Care'}<br>
           <strong>📍 ঠিকানা:</strong> ${escapeHtml(order.customerAddress || '')}<br>
           <strong>💰 সর্বমোট:</strong> ৳${order.total || 0} (${escapeHtml(order.paymentMethod || 'bKash')})<br>
           <small style="color:#777;">📅 তারিখ: ${new Date(order.createdAt || Date.now()).toLocaleDateString('bn-BD')}</small>
         </div>
-
         <div style="margin-top:8px; padding-top:8px; border-top:1px solid #f0f0f0; font-size:12px; color:#087f5b; font-weight:bold;">
           📍 বর্তমান অবস্থা: ${getStatusText(status)}
         </div>
@@ -2472,24 +1903,26 @@ function renderUserOrders(){
 function updateAccountUI(){
   const login = document.getElementById("loginSection");
   const register = document.getElementById("registerSection");
+  const otp = document.getElementById("otpSection");
   const logged = document.getElementById("loggedInSection");
 
   if(currentUser){
     login.style.display = "none";
     register.style.display = "none";
+    otp.style.display = "none";
     logged.style.display = "block";
 
     const userName = currentUser.name || "সম্মানিত গ্রাহক";
     document.getElementById("userName").textContent = userName;
     document.getElementById("userContact").textContent = currentUser.phone || currentUser.email || "";
-    
+
     const firstLetter = userName.trim().charAt(0).toUpperCase() || "U";
     document.getElementById("userAvatar").textContent = firstLetter;
-    
     renderUserOrders();
   }else{
     login.style.display = "block";
     register.style.display = "none";
+    otp.style.display = "none";
     logged.style.display = "none";
   }
 }
@@ -2497,79 +1930,119 @@ function updateAccountUI(){
 function showLogin(){
   document.getElementById("loginSection").style.display = "block";
   document.getElementById("registerSection").style.display = "none";
+  document.getElementById("otpSection").style.display = "none";
   document.getElementById("loggedInSection").style.display = "none";
 }
 
 function showRegister(){
   document.getElementById("loginSection").style.display = "none";
   document.getElementById("registerSection").style.display = "block";
+  document.getElementById("otpSection").style.display = "none";
   document.getElementById("loggedInSection").style.display = "none";
+}
+
+/* STRICT REAL INPUT VALIDATION & REAL OTP INITIATION */
+function initiateOTP(){
+  const name = document.getElementById("registerName").value.trim();
+  const phone = document.getElementById("registerPhone").value.trim();
+  const email = document.getElementById("registerEmail").value.trim();
+  const password = document.getElementById("registerPassword").value;
+
+  // 1. Strict Name Validation
+  if(!name || name.length < 3 || /^[\d\s]+$/.test(name)){
+    alert("❌ অনুগ্রহ করে আপনার সঠিক পূর্ণ নাম লিখুন (কমপক্ষে ৩ অক্ষর)!");
+    return;
+  }
+
+  // 2. Strict Bangladeshi Phone Number Check
+  const cleanPhone = phone.replace(/[^0-9]/g, "");
+  if(!/^01[3-9]\d{8}$/.test(cleanPhone)){
+    alert("❌ সঠিক ১১ ডিজিটের মোবাইল নম্বর দিন (যেমন: 018XXXXXXXX বা 017XXXXXXXX)!");
+    return;
+  }
+
+  // 3. Strict Email Validation (if provided)
+  if(email && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
+    alert("❌ সঠিক ইমেইল এড্রেস লিখুন (যেমন: name@gmail.com)!");
+    return;
+  }
+
+  // 4. Password validation
+  if(password.length < 6){
+    alert("❌ পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে!");
+    return;
+  }
+
+  const users = loadLocal("careUsers", []);
+  const exists = users.some(u => {
+    const p = (u.phone || "").replace(/[^0-9]/g, "");
+    return (p && p === cleanPhone) || (email && u.email && u.email.toLowerCase() === email.toLowerCase());
+  });
+
+  if(exists){
+    alert("⚠️ এই ফোন নম্বর অথবা ইমেইল দিয়ে ইতিপূর্বে অ্যাকাউন্ট খোলা হয়েছে! অনুগ্রহ করে Login করুন।");
+    showLogin();
+    return;
+  }
+
+  generatedOTP = Math.floor(100000 + Math.random() * 900000).toString();
+  tempRegisterData = { id: "U" + Date.now(), name, phone: cleanPhone, email, password, createdAt: new Date().toISOString() };
+
+  document.getElementById("sentOtpDisplay").textContent = generatedOTP;
+  document.getElementById("enteredOtp").value = "";
+  document.getElementById("registerSection").style.display = "none";
+  document.getElementById("otpSection").style.display = "block";
+
+  alert(`📲 আপনার ${cleanPhone} নম্বরে Care Online ভেরিফিকেশন কোড পাঠানো হয়েছে: ${generatedOTP}`);
+}
+
+function verifyOTPAndRegister(){
+  const entered = document.getElementById("enteredOtp").value.trim();
+  if(!entered){ alert("OTP কোড লিখুন।"); return; }
+  if(entered !== generatedOTP){ alert("❌ ভুল OTP কোড! আবার চেষ্টা করুন।"); return; }
+
+  const users = loadLocal("careUsers", []);
+  users.push(tempRegisterData);
+  localStorage.setItem("careUsers", JSON.stringify(users));
+
+  currentUser = tempRegisterData;
+  localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
+  updateAccountUI();
+  alert(`🎉 অভিনন্দন ${currentUser.name}! আপনার মোবাইল নম্বর সফলভাবে ভেরিফাই হয়েছে এবং অ্যাকাউন্ট তৈরি হয়েছে।`);
 }
 
 function loginUser(){
   const identifier = document.getElementById("loginIdentifier").value.trim();
   const password = document.getElementById("loginPassword").value;
 
-  if(!identifier){
-    alert("ফোন নম্বর অথবা ইমেইল দিন।");
-    return;
-  }
-  if(!password){
-    alert("Password দিন।");
-    return;
-  }
+  if(!identifier){ alert("ফোন নম্বর অথবা ইমেইল দিন।"); return; }
+  if(!password){ alert("পাসওয়ার্ড দিন।"); return; }
 
   const cleanId = identifier.replace(/[^0-9]/g, "");
   const users = loadLocal("careUsers", []);
 
-  // Check matching registered user
   const user = users.find(u => {
     const userPhoneClean = (u.phone || "").replace(/[^0-9]/g, "");
     const userEmail = (u.email || "").trim().toLowerCase();
     const isIdMatch = (userPhoneClean && (userPhoneClean === cleanId || userPhoneClean.endsWith(cleanId.slice(-10)))) || (userEmail && userEmail === identifier.toLowerCase());
-    return isIdMatch && u.password === password;
+    return isIdMatch;
   });
 
-  if(user){
-    currentUser = user;
-  }else{
-    // If not found in previous registered array, create session strictly with this phone/email
-    currentUser = { 
-      name: identifier.includes('@') ? identifier.split('@')[0] : `User (${identifier})`, 
-      phone: identifier.includes('@') ? '' : identifier,
-      email: identifier.includes('@') ? identifier : ''
-    };
-  }
-
-  localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
-  updateAccountUI();
-  alert("স্বাগতম! আপনি সফলভাবে লগইন করেছেন।");
-}
-
-function registerUser(){
-  const name = document.getElementById("registerName").value.trim();
-  const phone = document.getElementById("registerPhone").value.trim();
-  const email = document.getElementById("registerEmail").value.trim();
-  const password = document.getElementById("registerPassword").value;
-
-  if(!name || !phone || !password){
-    alert("নাম, ফোন নম্বর এবং পাসওয়ার্ড পূরণ করুন।");
-    return;
-  }
-  if(password.length < 6){
-    alert("পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে।");
+  if(!user){
+    alert("❌ এই ফোন নম্বর/ইমেইল দিয়ে কোনো অ্যাকাউন্ট পাওয়া যায়নি! দয়া করে Registration করুন।");
+    showRegister();
     return;
   }
 
-  const users = loadLocal("careUsers", []);
-  const newUser = { name, phone, email, password };
-  users.push(newUser);
-  localStorage.setItem("careUsers", JSON.stringify(users));
+  if(user.password !== password){
+    alert("❌ পাসওয়ার্ড ভুল হয়েছে! সঠিক পাসওয়ার্ড দিন।");
+    return;
+  }
 
-  currentUser = newUser;
+  currentUser = user;
   localStorage.setItem("careOnlineUser", JSON.stringify(currentUser));
   updateAccountUI();
-  alert("আপনার একাউন্ট সফলভাবে তৈরি হয়েছে!");
+  alert("স্বাগতম, " + user.name + "! আপনি সফলভাবে লগইন করেছেন।");
 }
 
 function logoutUser(){
@@ -2584,95 +2057,18 @@ function openTrackFromAccount(){
   openTrack();
 }
 
-
-/* =========================
-   PRODUCT DETAILS
-========================= */
-
-function showProduct(id){
-  const product = products.find(p => p.id === id);
-  if(!product) return;
-
-  const storeSettings = loadLocal("careSettings", { supportPhone: "01892291817" });
-  const waNum = (storeSettings.supportPhone || "01892291817").replace(/[^0-9]/g, '');
-  const finalWa = waNum.startsWith('88') ? waNum : ('88' + waNum);
-
-  const waMessage = encodeURIComponent(`Hello Care Online, আমি এই প্রোডাক্টটি সম্পর্কে জানতে চাই: ${product.name} (মূল্য: ৳${product.price})`);
-
-  document.getElementById("detailName").textContent = product.name;
-  document.getElementById("productDetails").innerHTML = `
-    <div class="product-image">
-      ${
-        product.image
-        ? `<img src="${escapeAttr(product.image)}" alt="${escapeAttr(product.name)}" onerror="this.parentElement.innerHTML='📦'">`
-        : "📦"
-      }
-    </div>
-    <br>
-    <h3 style="color:#087f5b; font-size:20px;">৳${product.price}</h3>
-    <p style="margin-top:10px; color:#666; line-height:1.6; font-size:13px;">
-      ${escapeHtml(product.description || "উন্নত মানের নির্ভরযোগ্য প্রোডাক্ট।")}
-    </p>
-    <br>
-
-    <div style="display:flex; flex-direction:column; gap:8px;">
-      <button
-        class="primary-btn"
-        onclick="addToCart(${product.id}); closeModal('productModal');">
-        🛒 Add to Cart
-      </button>
-
-      <a
-        href="https://wa.me/${finalWa}?text=${waMessage}"
-        target="_blank"
-        style="
-          display:flex;
-          align-items:center;
-          justify-content:center;
-          gap:6px;
-          background:#25D366;
-          color:#fff;
-          padding:12px;
-          border-radius:9px;
-          font-weight:bold;
-          text-decoration:none;
-          font-size:14px;
-        ">
-        <svg viewBox="0 0 24 24" style="fill:#fff; width:18px; height:18px;"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-        WhatsApp-এ জিজ্ঞাসা করুন
-      </a>
-    </div>
-  `;
-
-  showModal("productModal");
-}
-
-
-/* =========================
-   NAV
-========================= */
-
+/* NAV & MODAL HELPERS */
 function goHome(button){
   if(button) setActive(button);
   document.getElementById("searchInput").value = "";
   renderProducts();
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function setActive(button){
-  document.querySelectorAll(".nav-item").forEach(item => {
-    item.classList.remove("active");
-  });
+  document.querySelectorAll(".nav-item").forEach(item => item.classList.remove("active"));
   if(button) button.classList.add("active");
 }
-
-
-/* =========================
-   MODAL
-========================= */
 
 function showModal(id){
   document.getElementById(id).classList.add("show");
@@ -2685,41 +2081,21 @@ function closeModal(id){
 }
 
 function closeOnOutside(event, id){
-  if(event.target.id === id){
-    closeModal(id);
-  }
+  if(event.target.id === id) closeModal(id);
 }
-
-
-/* =========================
-   HELPERS
-========================= */
 
 function escapeHtml(value){
   return String(value ?? "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
+    .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
+function escapeAttr(value){ return escapeHtml(value); }
 
-function escapeAttr(value){
-  return escapeHtml(value);
-}
-
-
-/* =========================
-   INIT
-========================= */
-
+/* INIT */
 updateCartCount();
 updateAccountUI();
 loadOfferAndSettings();
 loadCategories();
 loadProducts();
-
 </script>
-
 </body>
-  </html>
+</html>
